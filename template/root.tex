@@ -21,7 +21,8 @@
 \usepackage{times} % assumes new font selection scheme installed
 \usepackage{amsmath} % assumes amsmath package installed
 \usepackage{amssymb}  % assumes amsmath package installed
-
+\usepackage[acronym]{glossaries}
+\usepackage{subfiles}
 % new added
 %\usepackage{fixltx2e}
 %\usepackage{dblfloatfix}
@@ -33,12 +34,14 @@
 \usepackage{tikz}
 \usepackage{hyperref}
 \usepackage{bookmark}
+\makeglossaries
 
 %\renewcommand\@seccntformat[1]{}
 
 \usetikzlibrary{arrows,positioning,shapes.geometric}
 
 \DeclareGraphicsExtensions{.eps}
+\subfile{glossary}
 
 \title{\LARGE \bf
 Hil Testing active dolly
@@ -88,7 +91,14 @@ Bla bla bla
 
 \end{itemize}
  
-Our conclusion is simple: the application of a Modelica language based simulation tool, such as Dymola, is very attractive to design the nonlinear inverse model controller for active dolly steering systems of HCT vehicles. 
+The following points will be covered in this paper:
+\begin{itemize}
+\item hardware and software utilized to achieve \gls{HIL} verification for an active converter dolly
+\item evaluation of existing delays in the implementation and their consequences
+\item discussion of three standard maneuvers for \gls{HCT}-combinations executed on the  developed \gls{HIL}-system and their comparison with simulation results
+\item necessary changes to the set-up for taking the developed solution to the test-track
+\end{itemize}
+
 
 \section{Hardware-setup}
 
