@@ -44,7 +44,7 @@
 \subfile{glossary}
 
 \title{\LARGE \bf
-Hil Testing active dolly
+Development and evaluation of a hardware-in-the-loop converter dolly platform for high capacity transport vehicles
 }
 
 \author{Michael Hofmann$^{1}$ and Sebastian Franz$^{1}$% <-this % stops a space
@@ -70,11 +70,7 @@ Hil Testing active dolly
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{abstract}
 
-Bla bla bla
-
-%A robustness analysis with respect to the actuator model variation and its effect on the overall performance is performed.
-%The advanced controller is designed using a nonlinear inversion of plant with actuator dynamics in it.
-%New technique: nonlinear inverse model based control strategy using Modelica standard to design the active safety systems of high capacity transport vehicles for stability improvement at high speeds. 
+\gls{HCT}-vehicles require different strategies in controlling lateral dynamics of the combinations to ensure optimal paths taken by the trailers. These steering algorithms have been developed in previous works and now need to be verified on the track. This work thus implemented a dolly experimentation platform incorporating a rapid-prototyping system to provide the possibility of evaluating these algorithms. The solution is detailed as a \gls{HIL}-test linked with a vehicle dynamics frame-work in this publication. Results for this setups utilizing the aforementioned algorithms are presented and discussed. Nevertheless it is possible to run the outlined solution on-track, for which some suggestions are given at the end of this work.
 
 \end{abstract}
 
@@ -96,27 +92,33 @@ The following points will be covered in this paper:
 \item hardware and software utilized to achieve \gls{HIL} verification for an active converter dolly
 \item evaluation of existing delays in the implementation and their consequences
 \item discussion of three standard maneuvers for \gls{HCT}-combinations executed on the  developed \gls{HIL}-system and their comparison with simulation results
-\item necessary changes to the set-up for taking the developed solution to the test-track
+\item propose necessary changes to the set-up for taking the developed solution to the test-track in the future
 \end{itemize}
 
 
 \section{Hardware-setup}
 
-   
+
+
 \subsection{dolly}
 
-
+The hardware base is a dolly manufactured by Parator Industries. The steering system is based around the \gls{ETS} developed and built by \gls{VSE} with two hydraulically steerable axles. It was originally meant to be used in trailer steering and as an after-market system does not tie in with any of the truck's communication networks or sensor data. This makes it OEM-independent and very robust. The \gls{ETS} solely relies on the articulation angle between the leading and following unit on which the system is mounted and the speed of the combination. The articulation angle is gathered via a dedicated sensor mounted on the king-pin, the speed-signal is gathered from the ISO-11992 \gls{CAN}.
 
 \subsection{MABII}
 
+To execute the readily developed algorithms\cite{c27}, that govern the steering of the \gls{HCT}-combination needed to be ported to a platform, capable of interacting with the dolly and the tractor, while ensuring robust behavior during run-time. It was decided to incorporate the \gls{MABII} by dSpace, a real-time platform for its advantages in automotive environments with a vast selection of in- and outputs for interfacing with vehicular communications systems (\gls{CAN}, ethernet, FlexLink). It conveniently ties in with Simulink, which was used for algorithm development, for code-generation. Furthermore it physically is very robust and has good logging possibilities.
 
 
 \subsection{Arduino}
+
+\subsection{interconnections between MABII/dolly/truck}
 
 
 \section{Software-setup} 
 
 \subsection{VTM}
+
+To simulate the dynamic performance of the \gls{HCT}-combination Volvo's \gls{VTM} came to use. 
 
 \subsection{RTI Zeug}
 \subsection{ControllDesk}
