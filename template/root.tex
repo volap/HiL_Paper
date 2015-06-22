@@ -1,0 +1,504 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%2345678901234567890123456789012345678901234567890123456789012345678901234567890
+%        1         2         3         4         5         6         7         8
+
+%\documentclass[letterpaper, 10 pt, conference]{ieeeconf}  % Comment this line out if you need a4paper
+
+\documentclass[letterpaper, 10pt, conference]{IEEEconf}      % Use this line for a4 paper
+
+\IEEEoverridecommandlockouts                              % This command is only needed if 
+                                                          % you want to use the \thanks command
+
+\overrideIEEEmargins                                      % Needed to meet printer requirements.
+
+% See the \addtolength command later in the file to balance the column lengths
+% on the last page of the document
+
+% The following packages can be found on http:\\www.ctan.org
+\usepackage{graphics} % for pdf, bitmapped graphics files
+\usepackage{epsfig} % for postscript graphics files
+\usepackage{mathptmx} % assumes new font selection scheme installed
+\usepackage{times} % assumes new font selection scheme installed
+\usepackage{amsmath} % assumes amsmath package installed
+\usepackage{amssymb}  % assumes amsmath package installed
+
+% new added
+%\usepackage{fixltx2e}
+%\usepackage{dblfloatfix}
+%\usepackage{geometry}% http://ctan.org/pkg/geometry
+%\usepackage{lipsum}% http://ctan.org/pkg/lipsum
+\usepackage{siunitx}
+\usepackage{graphicx}
+\usepackage{epstopdf}
+\usepackage{tikz}
+\usepackage{hyperref}
+\usepackage{bookmark}
+
+%\renewcommand\@seccntformat[1]{}
+
+\usetikzlibrary{arrows,positioning,shapes.geometric}
+
+\DeclareGraphicsExtensions{.eps}
+
+\title{\LARGE \bf
+Inverse Model Control Including Actuator Dynamics for Active Dolly Steering in High Capacity Transport Vehicle
+}
+
+\author{Mohammad Manjurul Islam$^{1}$ and Leo Laine$^{1,2}$ and Bengt Jacobson$^{1}$% <-this % stops a space
+%\thanks{*This work was supported by Volvo Group Trucks Technology, Chalmers University of Technology, SAFER, Parator.}% <-this % stops a space
+\thanks{$^{1}$Vehicle Engineering and Autonomous Systems, Department of Applied Mechanics, Chalmers University of Technology, SE-412~96 G\"OTEBORG, Sweden,
+        {\tt\small manjurul.islam@chalmers.se},
+        {\tt\small leo.laine@chalmers.se}, and \newline{\tt\small bengt.jacobson@chalmers.se}}%
+\thanks{$^{2}$Volvo Group Trucks Technology, Vehicle Engineering, Dept. BF72991, AB4S, SE-405~08 G\"OTEBORG, Sweden,
+        {\tt\small leo.laine@volvo.com}}%
+}
+
+
+
+\begin{document}
+
+
+
+\maketitle
+\thispagestyle{empty}
+\pagestyle{empty}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{abstract}
+This paper describes an advance controller designed using the nonlinear inversion technique of a Modelica\textsuperscript{\textregistered} based simulation tool, such as Dymola\textsuperscript{\textregistered}, for active dolly steering of a high capacity transport vehicle. Actuator dynamics is included in the inverse model controller. Therefore, it can automatically generate required steering angle request for the dolly axles of the vehicle combination. The resultant controller is transfered as a functional mock-up unit (FMU) to Simulink\textsuperscript{\textregistered} environment where the actual simulations are conducted. The controller is simulated against a high-fidelity vehicle model of an A-double combination from Virtual Truck Models (VTM) library -- developed by Volvo Group Trucks Technology. Effects of variations of the actual actuator dynamics, with respect to the modeled dynamics in the inverse model controller, on overall vehicle performance are investigated. 
+
+%A robustness analysis with respect to the actuator model variation and its effect on the overall performance is performed.
+%The advanced controller is designed using a nonlinear inversion of plant with actuator dynamics in it.
+%New technique: nonlinear inverse model based control strategy using Modelica standard to design the active safety systems of high capacity transport vehicles for stability improvement at high speeds. 
+
+\end{abstract}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{INTRODUCTION}
+
+High capacity transport (HCT) vehicles stand for heavier and longer vehicle combinations than what are available on today's road networks. Current European Regulations, permits maximum of 18.75 m in length and 40 tons in weight transport vehicles. Sweden, Finland, Denmark and Netherlands, however, permit 25.25 m and 60 tons vehicles \cite{c1}. The HCT vehicles correspond to the ones where any of these limits are exceeded resulting smarter solutions in future freight.
+
+Continuous and increasing demands on transportation of goods to long distances requires HCT vehicles. For conventional transports, the number of required drivers is comparatively higher for a specific amount of payload compared to the HCT vehicles. Fuel requirements are also decreased when these vehicles are used on the road networks. Since the fuel consumption is reduced, the environmental pollution is also decreased. The economic benefit is obvious due to the reduced fuel consumption and less number of driver requirements. Overall traffic safety is also improved with HCT vehicles compared to the traditional ones by reducing the number of road accidents \cite{c4,c24,c25}.
+
+Although benefits are huge, stability of these vehicle needs to be investigated deeply \cite{c2}. Higher center-of-gravity (CG), heavy weights, longer lengths, and increased number of articulated joints makes the vehicles' dynamic behaviors more complicated. At high speeds, each consecutive units interact with each other by transmitting higher forces and moments via articulated joints. Some situations might results serious dynamic instability resulting severe road accidents. The rollover, jack-knife, trailer sway  are dangerous unstable motion modes that exhibits at high speeds. The rearward amplification (RWA) of yaw rate and lateral acceleration often cause such modes. To provide safe road networks for all vehicles, road users, and infrastructure, the RWA control of such vehicles is an essential requirement.
+
+Several works has already been done to address these issues which are discussed at Section~VII. In this paper, we are going to discuss an economic and relatively easier way to solve the problem of RWA of these vehicles. For this purpose we have selected one candidate, called an A-double combination, of the different HCT vehicles. This combination consists of four vehicle units including a tractor, a semitrailer, a dolly, and another semitrailer. The axles of the vehicle are described in Section~II. Since in this combination the dolly is relatively very small unit among the other, we have chosen to find solution to the RWA problem by simply making the dolly axles steerable and actively controlled. The other vehicle units in the combination remains unchanged so that existing tractors and semitrailers can be used without any further modification. This system is relatively more economic compared to \emph{active trailer steering} \cite{c20}\cite{c21} systems. A similar but simple proportional gain control initiative of such case is taken in \cite{c23}. In this research, we would like to go to the next step.
+
+The driver drives the vehicle by steering the front axle of the tractor and it is obvious that he/she cannot handle a separate control device for controlling the steering angle on the dolly at high speeds. The next questions are: how to design an advanced controller for the steering system of the dolly? How to deal with the actuators in the steering system which has time delay and also its own dynamics? The goal of this paper is to investigate of the answers to the above key questions, in summary:
+
+\begin{itemize}
+\item Our \emph{first contribution} in this paper is to design and implement a controller, using nonlinear inverse of dynamic vehicle model with Modelica language \cite{c10} based simulation tool Dymola \cite{c19}, for the active dolly steering system of an A-double combination (Section II). Recently, designing controllers using such dynamics model inversion technique are becoming very popular. Various applications of this approach in recent research works are discussed in Section VII. Interestingly this excellent novel approach to design an advanced controller is not implemented yet in designing the active systems for the HCT vehicles.  
+\item The \emph{second contribution} in our work is to find the effects of actuator dynamics on the overall vehicle dynamic performance. This paper describes how and which part of the dynamics to include in the inverse model calculation (Section VI). We have suggested guidelines to do so in order to deal with the time delay and dynamics of the actual actuator.
+\item The \emph{third contribution} in this paper is to investigate what could possibly happen if the actuator model approximated in design of inverse model controller is different from the one originally used. In Section VI, a sensitivity analysis is performed and necessary recommendations are derived from numerous numerical simulations. 
+\item Finally, our \emph{fourth contribution} is to find the answer by only modifying a dolly axles as actively steerable how much dynamic performance at high speed can be achieved. The simulations are performed (Section VI) with the high-fidelity model from the Virtual Truck Models (VTM) library \cite{c6} developed and well-tested against numerous test data by Volvo Group Trucks Technology.  
+\end{itemize}
+ 
+Our conclusion is simple: the application of a Modelica language based simulation tool, such as Dymola, is very attractive to design the nonlinear inverse model controller for active dolly steering systems of HCT vehicles. 
+
+\section{VEHICLE MODELS}
+
+
+In the A-double combination, the tractor and each of the two semitrailers have three axles and the dolly has two axles. Each axle is labeled, in this paper, as $axle_{ij}$ corresponding to the $j$-th axle of the $i$-th unit. Two different models of the vehicle are used in this paper. One is the simple single track model \cite{c5} of the A-double combination. The other is a high-fidelity model, as shown in Fig.~\ref{AdoubleVTM}, developed in Simulink\textsuperscript{\textregistered} environment with \emph{Virtual Truck Model} (VTM) library \cite{c6}. The VTM library is originally developed and tested by Volvo Group Trucks Technology.
+   \begin{figure}[h]
+      \centering
+%      \framebox{\parbox{3.2in}{\centering \includegraphics[scale=1.1742]{AdoubleVTM}}}
+      \parbox{3.2in}{\centering \includegraphics[scale=1.1742]{AdoubleVTM}}
+      \caption{The A-double combination model from VTM}
+      \label{AdoubleVTM}
+   \end{figure}
+   
+\subsection{Single-Track Model}
+
+The single-track model used in this paper to construct the controller is developed in \cite{c5} with Dymola. The model in the Modelica language is used to calculate its inverse and to determine the dolly steering input for a single lane change maneuver at high speed.
+
+\subsection{VTM}
+
+The A-double combination form the VTM library is used to investigate the output of the control strategy presented in this paper. VTM library includes combined nonlinear tire modeling according to Pacejka 2002, suspension, and warping effect in chassis frames of the units. It has also suspended cab.
+
+\section{CONTROLLER DESIGN}
+
+The inverse model controller is used to determine the dolly steering angle input for the single lane change maneuver of A-double combination. 
+%The goal of the controller design is that the current motion of the lead unit (tractor) shall be followed by a trailing unit after certain time (delay time), required by the trailing unit to travel the distance between the lead unit (tractor) and the trailing unit. The time required to travel the distance always varies with the vehicle forward speed.
+
+The overall goal of the controller design is that the motion of the lead unit  at a certain position on road shall be copied by each trailing unit when it reaches to the same position. This is implemented as the motion at the center-of-gravity (CG) of the dolly shall copy that of the tractor. The motion is expressed in each unit's lateral acceleration. To reach the same position by the trailing units, such as dolly in this paper, the time delay is implemented.
+
+The time delay is the time that is required for the trailing unit (dolly) to travel the distance between the CG of lead unit (tractor) and that of the trailing unit. The time required to travel the distance always varies with the vehicle forward speed. The delay time $\tau_{13}$ was calculated to generate the reference lateral acceleration for the dolly using the following equation,
+$$
+\tau_{13} = \frac{l_{cg13}}{v_x(t)} \eqno{(1)}
+$$
+where, $l_{cg13}$ is the distance between the tractor CG and the dolly CG when all the articulation angles take the value of zero, and $v_x(t)$ denotes the vehicle forward speed.
+
+In the controller design the lateral acceleration $a_{y1}(t)$ of the tractor at CG is chosen to be followed by the dolly (third vehicle unit) at CG after the time $\tau_{13}$. Mathematically, the expression becomes,
+$$
+a_{y3ref}(t) = a_{y1}(t-\tau_{13})  \eqno{(2)}
+$$
+where, $a_{y1}(t-\tau_{13})$ is measured in the body-fixed coordinate system at tractor CG and, likewise, $a_{y3ref}(t)$ at dolly CG.
+   
+In this paper, the vehicle forward speed $v_x(t)$ is assumed to be known in the single-track model. In the case of VTM, a simple cruise controller available from the VTM library is used to run the simulation at approximately constant forward speed.
+
+\subsection{Inverse Model} 
+As mentioned before, the vehicle model is modeled in Modelica language which has a benefit over modeling tool like Simulink\textsuperscript{\textregistered}. The causality of a model is predefined in Simulink\textsuperscript{\textregistered}, but not in Modelica\textsuperscript{\textregistered}. In other words, the predefined fixed causality makes the input and output to the system fixed in Simulink\textsuperscript{\textregistered}. On the other hands, in Modelica\textsuperscript{\textregistered} the flow of solution direction is adapted as required data flow context. The data flow context set which variables needed to be output and which input. As a result the Modelica\textsuperscript{\textregistered} can perform inverse simulation. 
+
+   \begin{figure}[h]
+      \centering
+%      \framebox{\parbox{3.2in}{\centering \includegraphics[scale=0.56]{modelicaInv.png}}
+%      }
+\includegraphics[scale=0.375]{modelicaInv.png}
+      \caption{Modelica\textsuperscript{\textregistered} Inverse of the single track A-double model}
+      \label{modelicaInv}
+   \end{figure}
+
+ As shown in Fig.~\ref{modelicaInv}, the inverse of the A-double single track model represented by the block \verb|singleTrackModel|. The output of this block is the lateral acceleration of the dolly \verb|ay3|, while the tractor front axle steering input, dolly steering input, and vehicle forward speed are represented as \verb|delta|, \verb|deltaDolly|, and \verb|vx| respectively. Since we would like to calculate inverse of the singleTrackModel so that the output \verb|ay3| will act as an input and the input \verb|deltaDolly| as an output to the model. This can be done, since we are using Modelica language, by simply connecting the reference input signal \verb|ay3ref| to the output \verb|ay3| and the input \verb|deltaDolly| to the output \verb|deltaDollyReq|. In Dymola\textsuperscript{\textregistered}, this connection is accomplished by a block called \verb|inverseBlockConstraints|. Then the overall system, in Fig.~\ref{modelicaInv} will act as the inverse of \verb|singleTrackModel| where the input to the inverse model is \verb|ay3ref| and the output the required dolly steering angle signal \verb|deltaDollyReq| which is the inverse model $G^{-1}$, also shown in Fig.~\ref{inverseModel}. In this figure, $a_{y3ref}$, $\delta_{11,HMI}$, $v_x$, and $\delta_{dolreq}$ represents reference lateral acceleration signal at dolly CG, tractor front axle steering input, vehicle forward speed, and dolly steering angle request signal, respectively. 
+ 
+    \begin{figure}[t!]
+       \centering      
+       \tikzstyle{block} = [draw, fill=none, rectangle, 
+           minimum height=3em, minimum width=6em]
+       \tikzstyle{sum} = [draw, fill=none, circle, node distance=1cm]
+       \tikzstyle{input} = [coordinate]
+       \tikzstyle{output} = [coordinate]
+       \tikzstyle{pinstyle} = [pin edge={to-,thin,black}]     
+       \begin{tikzpicture}[auto, node distance=2cm,>=latex']
+           \node [input, name=input] {};
+           \node [block, right of=input, node distance=2.5cm] (invModel) {$G^{-1}$};
+           \node [output, right of=invModel, node distance=2.7cm] (output){};    
+           \draw [->] (input) -- node {$a_{y3ref}$} (invModel);
+           \draw [->] (invModel) -- node {$\delta_{dolreq}$} (output);
+           \draw [->] (2,1.5) -- node[left]{$\delta_{11,HMI}$}(2,0.5);
+           \draw [->] (3,1.5) -- node{$v_x$}(3,0.5);
+       \end{tikzpicture}
+       \caption{Inverse model controller}
+       \label{inverseModel}
+    \end{figure}  
+
+\section{SIMULATION ENVIRONMENTS}
+
+Framework of the computer simulation is described in Fig.~\ref{framework} and the final simulations are carried out in Simulink\textsuperscript{\textregistered} platform. As shown in the figure, a part of it is constructed in the Modelica\textsuperscript{\textregistered} environment. The motivation of choosing the latter is to utilize the inversion capability of a nonlinear model as described in the previous section. The Modelica model is exported to the Simulink\textsuperscript{\textregistered} platform as a functional mockup unit (FMU) using the functional mockup interface (FMI) specifications \cite{c7}. A \emph{Modelica Single-Track Model} (same as \verb|singleTrackModel| in Fig.~\ref{modelicaInv}) block in Fig.~\ref{framework}, is constructed in Modelica\textsuperscript{\textregistered} with linear tire parameters. The model is nonlinear, since it includes sine and cosine terms. The model was implemented with the \emph{Inverse Model} block as shown in the figure. 
+
+\begin{figure*}[]
+%      \centering
+%      \framebox{\parbox{6.8in}{\centering\includegraphics[scale=.315]{framework.pdf}}}
+      \parbox{7.0in}{\centering\includegraphics[scale=.39]{framework.pdf}}
+      \caption{The vehicle simulation framework}
+      \label{framework}
+\end{figure*}
+   
+\subsection{Software Architecture}
+
+In the simulation framework following a software architecture is implemented which consists of various functional domains as shown in Fig.~\ref{framework}. 
+
+\subsubsection{Human Machine Interface}
+
+At the human machine interface (HMI) domain, the actual interaction between the vehicle and the human driver takes place. For example, the tractor front axle steering angle input from the human driver is generated at this domain.
+
+\subsubsection{Vehicle Motion Management}
+The vehicle motion management (VMM) domain includes the high-level controllers for motion and stability of the vehicle. It receives the driver inputs from the HMI domain. It sends actuator requests to the motion support devices (MSD) domain and receives the actuator status, capabilities from there. 
+
+\subsubsection{Motion Support Devices}
+The motion support devices (MSD) domain contains hydraulic, pneumatic, and/or electric actuators of the dolly steering systems and various low level controllers etc. to support the motion demanded by VMM domain. The MSD domain is responsible to measure the subsystems' states of health from the actual status and capabilities of the actuators and send it to the high-level controller at the VMM domain for any necessary safety action if needed.
+
+%The block also utilizes the dynamic part of the actuator model for the dolly steering system. Along with this model, two first order filters are used -- one in the path of the dolly lateral acceleration reference signal $a_{y3ref}(t)$, and the other of driver steering input $\delta_{11,HMI}(t)$. The filters are used to provide derivatives of the signals as required for the inversion process of the nonlinear model by Modelica\textsuperscript{\textregistered} \cite{c8}. 
+%\paragraph{Actuator Model}
+%Active dolly steering system has the actuator which has important dynamic influence on overall performance of the vehicle combination. The actuator is therefore modelled in this paper and added to the controller. The actuator model is constructed as a first order filter with a delay of 0.3 sec.
+   
+\subsubsection{Vehicle Plant}
+The vehicle plant (VP) domain contains the high-fidelity model of the vehicle. As mentioned before the vehicle model, as shown in Fig.~\ref{AdoubleVTM}, is constructed from the VTM library.
+
+\subsection{Control Signal and Mechanical Information Flow}
+
+The HMI domain generates the driver steering angle input $\delta_{11,HMI}(t)$ of tractor front axle (axle11) and sent to the \emph{Inverse Model} and the \emph{Modelica Single-Track Model} blocks at the VMM domain. This mechanical information $\delta_{11,HMI}(t)$ is also sent to the vehicle model of the VTM library at the VP domain. 
+ 
+At VMM domain, a first order filter with the time constant $T_2$ of a sufficiently small value is used to generate the derivative of the driver steering input $\delta_{11,HMI}(t)$ before it goes to the inverse model block. The derivative of the signal is required by the inverse model block to facilitate the inversion operation. 
+
+The inverse block contains the actuator dynamics (as a first order filter) and a vehicle model same as \emph{Modelica Single-Track Model}. With the vehicle forward speed $v_x(t)$, the reference signal $a_{y3ref}(t)$, and the steering input $\delta_{11,HMI}(t)$, the \emph{Inverse Model} block generates the output signal of dolly steering angle request $\delta_{dolreq}(t)$. This requested $\delta_{dolreq}(t)$ signal goes to the steering actuator model located at MSD domain. Note that the reference signal $a_{y3ref}(t)$ is sent to the \emph{Inverse Model} block via another first order filter with time constant $T_1$ of a sufficiently small value. 
+
+The dolly steering actuator model, at MSD domain, consists of two parts, namely, the first order filter and the time delay. The former is constructed as a first order filter with a time constant of $T_{msd}$. While the later part is a transport delay with a delay time of $\tau_{msd}$. With the requested $\delta_{dolreq}(t)$, the actuator model at the MSD domain generates the actual dolly steering angle $\delta_{dol,MSD}(t)$ signals which are sent to the dolly steering angle at VP domain. Two parallel simulations are individually carried out by the plant model at VP and by the \emph{Modelica Single-Track Model} at VMM using the given driver steering angle input $\delta_{11,HMI}(t)$ of the tractor front axle, the actual steering input $\delta_{dolly,MSD}(t)$ of the dolly axles, and the vehicle forward speed $v_x(t)$. Both axles of the dolly take identical steering angle input value of $\delta_{dolly,MSD}(t)$.  
+
+At VMM domain, the output lateral acceleration $a_{y1}(t)$ of the \emph{Modelica Single-Track Model} is delayed by $\tau_{13}$ to generate the reference signal $a_{y3ref}(t)$ for the \emph{Inverse Model} using (2) and the process continues until the simulation is finished. It is very important to note, the lateral acceleration signal $a_{y1}(t)$ at tractor CG is not measured from the VTM model, but from the single-track model. It was done so as to avoid problems with compliance between the single-track and the VTM model. The VTM model here is a representation of the ``real vehicle" on road. If we measure/estimate the signal $a_{y1}(t)$ from the sensors at tractor CG, we need to filter the noisy sensor signals which is often difficult in practice. Even if we choose to do so, the filtering process will delay the signal resulting possible degradation of dynamics performance as a whole especially at high speeds. 
+%As mentioned before, with the reference acceleration signal $a_{y3ref}(t)$, the inverse model calculates the dolly steering angle request $\delta_{dolreq}(t)$; provided the tractor front axle steering angle input $\delta_{11,HMI}(t)$ of human driver, and the vehicle forward speed $v_x(t)$ are known. 
+
+
+
+   \begin{figure}[t!]
+      \centering      
+      \tikzstyle{block} = [draw, fill=none, rectangle, 
+          minimum height=3em, minimum width=6em]
+      \tikzstyle{sum} = [draw, fill=none, circle, node distance=0.8cm]
+      \tikzstyle{input} = [coordinate]
+      \tikzstyle{output} = [coordinate]
+      \tikzstyle{pinstyle} = [pin edge={to-,thin,black}]     
+      \begin{tikzpicture}[auto, node distance=2cm,>=latex']
+          \node [input, name=input] {};
+          \node [block, right of=input, node distance=2.48cm] (actuatorFO) {$\frac{1}{s T_{msd} + 1}$};
+          \node [block, right of=actuatorFO, node distance=3cm] (actuatorTD) {$e^{-s \tau_{msd}}$};
+          \node [output, right of=actuatorTD, node distance=2.5cm] (output){};          
+          \draw [->] (input)node[above right] {$\delta_{dolreq}$} --  (actuatorFO);
+          \draw [->] (actuatorFO) -- node[name=delt] {} (actuatorTD);
+          \draw [->] (actuatorTD) --  (output) node[above] {$\delta_{dolly,MSD}$};
+          \draw[gray] (1.2,-1) rectangle (6.8,1);
+      \end{tikzpicture}
+      \caption{Actuator model}
+      \label{actuator}
+   \end{figure}  
+   
+  
+
+\section{RESULTS AND DISCUSSIONS}
+
+The vehicle simulations are performed with 20 meter per second forward speed for a single lane change maneuver. The steering input is a sine wave of \SI{0.4}{Hz} and amplitude of \SI{0.026}{rad} which is chosen from the motivation that the lateral acceleration is adequately lower throughout the maneuver. To ensure, the tire cornering stiffness of each axle stays in the linear reason, the lateral acceleration must be less than 0.3$g$ \cite{c26}. The time constant $T_{vmm}$ of the actuator model of the inverse controller in the VMM domain takes the value of \SI{0.35}{seconds}. The actuator model time constant $T_{msd}$ in the MSD domain takes the same value of \SI{0.35}{seconds}. The time delay $\tau_{msd}$ of the actuator model in the MSD takes the value of \SI{0.10}{seconds}. In all the simulations the time constants $T_1$ and $T_2$ take the value of 0.01 seconds. These parameters are realistic for a steered axle.
+
+Both the dolly axles are steered with the same steering input $\delta_{dol,MSD}$. Fig.~\ref{yawr_pass} and~\ref{yawr_active} present the time history of yaw rate of each unit of the vehicle combination without (passive) and with (active) steering of dolly axles respectively. In the passive dolly case, the 2nd semitrailer exhibits highest peak value of yaw rate taking the yaw rate RWA of the value of 1.49. On the other hand, for the active dolly steering case, the highest peak yaw rate is observed at 1st semitrailer taking the yaw rate RWA the value of 1.04. Between the tractor and the 2nd semitrailer, the yaw rate RWA takes the value of 0.93 in the control case. The value of lateral acceleration RWA is 1.0 in an ideal case \cite{c21}. Since the RWA between tractor and 2nd semitrailer is most important compared to the one between tractor and 1st semitrailer, the former will be used to for rest of the discussion unless mentioned.  
+
+   \begin{figure}[t!]
+      
+%      \framebox{\parbox{3.2in}{\includegraphics[scale=.57]{yawr_pass.eps}}}
+      \parbox{3.2in}{\centering\includegraphics[scale=.45]{yawr_pass.eps}}
+      \caption{Time history of yaw rates of each units during single lane change maneuver without steering of dolly axles}
+      \label{yawr_pass}
+   \end{figure}   
+
+   \begin{figure}[t!]
+      \centering
+%      \framebox{\parbox{3.2in}{\centering\includegraphics[scale=.57]{yawr_active.eps}}}
+      \parbox{3.2in}{\centering\includegraphics[scale=.45]{yawr_active.eps}}
+      \caption{Time history of yaw rates of each units during single lane change maneuver with active steering of dolly axles}
+      \label{yawr_active}
+   \end{figure}
+      
+Fig.~\ref{traj_pass} and~\ref{traj_active} show the trajectories of tractor front axle (axle11), last axle of 1st semitrailer (axle23), of dolly (axle32), and of 2nd semitrailer (axle43) for the passive and active dolly steering cases respectively. The values of transient off-tracking during the lane change maneuver calculated between axle11 and axle43 are \SI{0.42}{m} and \SI{0.14}{m} for passive and active case respectively. The transient off-tracking is improved 67\% in the control case compared to the baseline case. Fig.\ref{dolly_str_ang} shows the time history of active dolly steering input $\delta_{dolly,MSD}$ during this lane change maneuver. As mentioned before, both axles of the dolly have the same steering input.
+
+   \begin{figure}[t!]
+      \centering
+%      \framebox{\parbox{3.2in}{\centering\includegraphics[scale=.57]{traj_pass.eps}}}
+      \parbox{3.2in}{\centering\includegraphics[scale=.45]{traj_pass.eps}}
+      \caption{Trajectory of different axle centers during single lane change maneuver without steering of dolly axles}
+      \label{traj_pass}
+   \end{figure}
+
+   \begin{figure}[t!]
+      \centering
+%      \framebox{ \parbox{3.2in}{\centering\includegraphics[scale=.57]{traj_active.eps}}}  
+	  \parbox{3.2in}{\centering\includegraphics[scale=.45]{traj_active.eps}}    
+      \caption{Trajectory of different axle centers during single lane change maneuver with active steering of dolly axles}
+      \label{traj_active}
+   \end{figure}
+ 
+   \begin{figure}[t!]
+      \centering
+%      \framebox{ \parbox{3.2in}{\centering\includegraphics[scale=.57]{dolly_str_ang.eps}}}      
+      \parbox{3.2in}{\centering\includegraphics[scale=.45]{dolly_str_ang.eps}}
+      \caption{Time history of active dolly steering input $\delta_{dolly,MSD}$}
+      \label{dolly_str_ang}
+   \end{figure}     
+\subsection{Sensitivity Analyses}
+
+In this section, the sensitivity of the controller with respect to the variation of actuator dynamics will be discussed. 
+
+\subsubsection{Variation of plants against fixed controller}
+
+Figure~\ref{yawRWA41_TsVMM_fixed_3d} shows theß sensitivity of rearward amplification (RWA) of yaw rate with the variation of actuator plant model parameters, namely, time delay $\tau_{msd}$ and time constant $T_{msd}$ in MSD domain. For each point in this figure, the other parameters remains unchanged and the $T_{vmm}$ in the inverse model in VMM domain takes the constant value of 0.35 seconds. We can find few interesting observations from the figure. 
+
+   \begin{figure}[t!]
+      \centering
+%      \framebox{\parbox{3.2in}{\centering
+%      \includegraphics[scale=.59]{yawRWA41_TsVMM_fixed_3d.eps}}}      
+      \parbox{3.2in}{\centering
+            \includegraphics[scale=.45]{yawRWA41_TsVMM_fixed_3d.eps}}
+            \caption{Yaw rate RWA41 with the variation of actuator plant parameters $T_{msd}$ and $\tau_{msd}$ for a fixed $T_{vmm}$}
+      \label{yawRWA41_TsVMM_fixed_3d}
+   \end{figure}
+
+\emph{Firstly}, for a given level of RWA of yaw rate, there is an inverse relationship between actuator time delay $\tau_{msd}$ and time constant $T_{msd}$. In other words, to maintain the same RWA of yaw rate increase in the value of $\tau_{msd}$ needs a decrease of $T_{msd}$. As mentioned before, the time constant $T_{vmm}$ in inverse controller of VMM domain takes constant value of 0.35 seconds for all the points throughout the figure. The inverse controller does not include any time delay information.
+   
+\emph{Secondly}, since the inverse controller is designed for the point where $\tau_{msd}$ and $T_{msd}$ take the value of 0 and 0.35 seconds respectively, the minimum RWA locates close to that point. Due to their inverse relationship there exist a minimum linear zone of RWA in the plane of $\tau_{msd}$ and $T_{msd}$. 
+
+\emph{Thirdly}, with the increase of both $\tau_{msd}$ and $T_{msd}$ the RWA starts to decrease up to the minimum linear zone and then starts to increase. 
+%   \begin{figure}[t!]
+%      \centering
+%      \framebox{\parbox{3.2in}{\centering
+%      \includegraphics[scale=.59]{yawRWA41_TsVMM_fixed_3d.eps}}}
+%      \caption{yaw rate RWA41 with different actuator model time constant and delay time}
+%      \label{ayRWA41_TsVMM_fixed_3d}      
+%   \end{figure}
+
+\subsubsection{Variation of inverse controller time constant in VMM and of time delay in MSD domain} 
+
+The sensitivity of yaw rate RWA with respect to the variation of the inverse controller time constant $T_{vmm}$ and the time delay $\tau_{msd}$ of the actual actuator in VMM and MSD domain respectively are described in Fig.~\ref{yawRWA41_TsMSD_fixed_3d}. For all the simulations in this figure the time constant $T_{msd}$ of the actual time constant in MSD domain is kept unchanged taking the value of 0.35 seconds. We can extract several interesting phenomena from the figure. 
+
+   \begin{figure}[t!]
+      \centering
+%      \framebox{\parbox{3.2in}{
+%      \centering\includegraphics[scale=.59]{yawRWA41_TsMSD_fixed_3d.eps}}}     
+      \parbox{3.2in}{
+            \centering\includegraphics[scale=.45]{yawRWA41_TsMSD_fixed_3d.eps}}
+            \caption{Yaw rate RWA41 with the variation of actuator plant parameters $T_{vmm}$ and $\tau_{msd}$ for a fixed $T_{msd}$}
+      \label{yawRWA41_TsMSD_fixed_3d}
+   \end{figure}      
+
+\emph{Firstly}, while for fixed $T_{msd}$ and $\tau_{msd}$, yaw rate RWA can be improved by increasing the value of $T_{vmm}$ in VMM domain. This is probably the most important findings of this figure which can be guidance to designer of such controller to design a better one that can handle time constant of the first order filter. However, this improvement has a limit beyond which the yaw rate RWA cannot be decreased further as started to increase.
+
+\emph{Secondly}, if we use an actuator with a comparatively lower value of the time delay $\tau_{msd}$, the stability improves by decreasing the yaw rate RWA while the other parameters including the time constant $T_{msd}$ taking the value of 0.35 seconds in the MSD domain remains unchanged as shown in Fig.~\ref{yawRWA41_TsMSD_fixed_3d}. The improvement however has a limit beyond which the yaw rate RWA cannot be decreased only by decreasing the value of actuator time delay $\tau_{msd}$. Even for a higher value of time constant $T_{vmm}$ of the inverse model controller in the VMM domain, yaw rate RWA starts to increase again after reaching a minima as indicated at the very lower left part of the surface. \emph{Thirdly}, the contour lines at the bottom of Fig.~\ref{yawRWA41_TsMSD_fixed_3d} are of exponential shape indicating the fact, the slight increase in actuator time delay $\tau_{msd}$ degrades the vehicle performance at a much faster rate by increasing the yaw rate RWA at higher levels of $\tau_{msd}$ compared to at its lower levels.  
+
+\subsubsection{Special case -- perfect match condition}
+
+So far the discussion was about the effect of yaw rate RWA when there is a difference in dynamics of the actuator model used in the inverse model controller in the VMM domain and the one of actual plant in the MSD domain. However, this could be also interesting to investigate how far the proposed controller could achieve while there is a perfect match between the designed time constant $T_{vmm}$ and actual $T_{msd}$ in the VMM and MSD domain respectively. Fig.~\ref{yawRWA41_equal_3d} illustrates the sensitivity of yaw rate RWA with the variation of actuator time delay $\tau_{msd}$ and the time constants $T_{vmm}$ and $T_{msd}$. In this figure, both the time constants take exact same values indicating the perfect match situation. The figures clearly shows that the stability of the vehicle only depends on the actuator time delay $\tau_{msd}$ in MSD domain. The yaw rate RWA decreases quiet linearly by decreasing the actuator time delay $\tau_{msd}$.
+ 
+   \begin{figure}[t!]
+      \centering
+%      \framebox{\parbox{3.2in}{\centering\includegraphics[scale=.59]{yawRWA41_equal_3d.eps}}}      
+      \parbox{3.2in}{\centering\includegraphics[scale=.45]{yawRWA41_equal_3d.eps}}
+      \caption{Yaw rate RWA41 with the variation of actuator plant parameters $\tau_{msd}$ and $T_{msd}$, provided $T_{vmm}$ takes the same value of $T_{msd}$}
+      \label{yawRWA41_equal_3d}
+   \end{figure}   
+%   \begin{figure}[t!]
+%      \centering
+%      \framebox{\parbox{3.2in}{
+%      \centering\includegraphics[scale=.57]{deltaDolly_compare.eps}}}      
+%      \caption{Dolly steering input comparison for ideal case versus a faster actuator when inverse model control is equal to TsVMM}
+%      \label{deltaDolly_compare}
+%   \end{figure} 
+%   
+%\subsection{Controller variation vs. fixed actuator}
+%
+%   \subsection{Equal controller and plant}
+
+Figure~\ref{yawRWA41_TsMSD_TsMSD_with_fixed_tauMSD} describes how the RWA of yaw rate varies with the variations of designed actuator parameter and actual one when the time delay $\tau_{msd}$ of plant takes the value of 0.3 seconds. It is clear from the figure that the time delay $\tau_{msd}$ can be compensated by solving the higher value of $T_{vmm}$ than the value of $T_{msd}$.
+   \begin{figure}[t!]
+      \centering
+%      \framebox{\parbox{3.2in}{\centering\includegraphics[scale=.59]{yawRWA41_TsMSD_TsMSD_with_fixed_tauMSD2.eps}}}      
+      \parbox{3.2in}{\centering\includegraphics[scale=.45]{yawRWA41_TsMSD_TsMSD_with_fixed_tauMSD2.eps}}
+      \caption{Yaw rate RWA41 with the variation of parameters $T_{vmm}$ and $T_{msd}$ for fixed value of $\tau_{msd}$ = 0.3 sec}
+      \label{yawRWA41_TsMSD_TsMSD_with_fixed_tauMSD}
+   \end{figure}
+Fig.~\ref{all3} shows the relationship among the time constant $T_{vmm}$ of the first order filter of the inverse controller in VMM domain and the actuator parameters of time constant $T_{msd}$ and time delay $\tau_{msd}$ in the MSD domain. This plots could be a guideline to select appropriate $T_{vmm}$ to design a controller for given actuator model ($T_{msd}$ and $\tau_{msd}$).
+
+   \begin{figure}[t!]
+%      \centering
+%      \framebox{\parbox{3.2in}{\centering\includegraphics[scale=.61]{all3.eps}}}      
+      \parbox{3.2in}{\centering\includegraphics[scale=.45]{all3a.eps}}
+      \caption{Relationship among the parameters $\tau_{msd}$ and $T_{msd}$, provided $T_{vmm}$; red denotes yaw rate RWA equal to 1.2, green to 1.0, and blue 0.8}
+      \label{all3}
+   \end{figure}   
+   
+To check the robustness of the proposed controller, the effects of the vehicle parameter variations are also investigated. The mass and moment of inertia of each unit is expected to be estimated accurately due to air suspension measures of axle loads. Therefore, the remaining most difficult parameters to predict are the cornering stiffnesses. For this check, -20\%, 0\%, and +20\% variations of the tire cornering stiffness of each axle groups and the tractor front axle for the controller presented in Fig.~\ref{yawr_active},~\ref{traj_active}, and~\ref{dolly_str_ang} are simulated resulting in total 243 simulations (3 to the fifth power). Fig.~\ref{sensi} shows the histogram values of yawRWA41 with a fitted normal density function. No points of this function is exceeding the baseline yawRWA41 value of 1.49. 
+ \begin{figure}[t!]
+ 	%      \centering
+ 	%      \framebox{\parbox{3.2in}{\centering\includegraphics[scale=.61]{all3.eps}}}      
+ 	\parbox{3.2in}{\centering\includegraphics[scale=.4]{sensi.eps}}
+ 	\caption{Distribution of yawRWA41 with $\pm$20\% variation of tire cornering coefficient different axle groups.}
+ 	\label{sensi}
+ \end{figure}   
+\section{RELATED WORKS}
+
+Using linear quadratic regulator (LQR) technique active trailer steering (ATS) systems designed are suggested in \cite{c20}\cite{c22} to suppress the rearward amplification of HCT vehicles. These works shows impressive results including supporting field test data. However, these procedures suggests to have all the trailer axles should be steerable meaning that the existing trailers could not be used without modification. This approach suffers from higher cost. On the other hand, in \cite{c21} parallel optimization based control system design using LQR technique is presented. Unfortunately, this approach demands high computation cost. 
+
+  
+
+The alternative approach of Modelica\textsuperscript{\textregistered} to automatically calculate of a complex nonlinear inverse model based controller is very recently found to very effective in many disciplines. An interesting and motivating work in presented in \cite{c8}, where a general technique for using nonlinear inverse model approach to design an advance controller in Modelica\textsuperscript{\textregistered} is described in details. In this paper, an application of such inverse model controllers is demonstrated in a cooling system of a mixing reactor. How actuator dynamics could be included in the inverse model controller calculation, however, is not discussed in this paper very clearly. On the other hand, inverse of an electro-mechanical actuator model is designed in \cite{c11} with Modelica for the power optimization purpose of an aircraft system. The paper mainly describes the usability of Modelica\textsuperscript{\textregistered} in such system design. The actuator model is inverted to obtain the necessary motor current for the demanded position of the control surface of the aircraft under the predefined load. Details analysis of how the actuator parameter variation from the designed one affects the overall performance is not presented in their work.
+
+The Modelica\textsuperscript{\textregistered} inversion is also utilized in vibration control of elastic joint robots \cite{c13}\cite{c14} following the control structure of two degree-of-freedom originally presented in \cite{c15}. Using the inverse disturbance observer (IDOB) \cite{c17}\cite{c18} technique an approximate inversion with Modelica inverse controller is designed to control a six degree-of-freedom parallel kinematic structure\cite{c12}. A similar approach is also presented in \cite{c16} to invert vehicle steering dynamics. Similar to the software architecture was also presented in \cite{c9}. But in this paper it is extended to implement the nonlinear inverse model controller. 
+ 
+\section{CONCLUSIONS}
+
+This paper examines the nonlinear inverse model control approach with Modelica language based simulation tool Dymola\textsuperscript{\textregistered} for stability improvement at high speeds a particular type of high capacity transport vehicles, called A-double combination. The inverse model based controller is developed in Modelica\textsuperscript{\textregistered} and is exported to Simulink\textsuperscript{\textregistered} using the functional mockup interface (FMI) specifications. The
+simulation is performed using the controller with the high fidelity model, called VTM. Numerous simulation result analyses indicate that by including time constant with slightly higher value in the inverse model controller, the actual actuator dynamics can be well compensated.
+%The simulation results shows that the stability is improved by 27.11\% decreasing of the lateral acceleration rearward amplification and 30.20\% decreasing of the yaw rate rearward amplification.  
+
+\addtolength{\textheight}{-12cm}   % This command serves to balance the column lengths
+                                  % on the last page of the document manually. It shortens
+                                  % the textheight of the last page by a suitable amount.
+                                  % This command does not take effect until the next page
+                                  % so it should come on the page before the last. Make
+                                  % sure that you do not shorten the textheight too much.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{APPENDIX}
+
+The vehicle parameters are as follows. The axle positions relative to first axle of each unit are 0, -3, -4.37; 0, -1.3, -2.6; 0, -1.3; and 0, -1.3, -2.6 meters (negative signs for backward direction). The CG positions relative to first axle of each unit are -1.4540, 2.0656, 0.0609, and 1.7499 meters. The front coupling positions relative to the first axle of each unit are 0, 6.4, 3.9,and 6.4 meters and that of the rear -3.4, -4, -0.65, and 0 meters. The linear cornering stiffnesses (per axle) are 407000, 1035000, 1035000; 413333, 413333, 413333; 585000, 585000; and 473333, 473333, 473333 newtons per radian. The moment of inertia of each units are 35573, 661430, 7280, and 673400 kilogram meter squared. The masses of each unit are 9841, 33101, 3200, and 33800 kilograms.
+
+\section*{ACKNOWLEDGMENT}
+
+The authors gratefully acknowledge and thank Niklas Fr\"ojd from Volvo Group Trucks Technology, and Fredrik Bruzelius from VTI for helpful discussions and advices. Thanks also go to Volvo Group Trucks Technology, Chalmers University of Technology, Parator, and SAFER for their financial support. 
+%The preferred spelling of the word “acknowledgment” in America is without an “e” after the “g”. Avoid the stilted expression, “One of us (R. B. G.) thanks . . .”  Instead, try “R. B. G. thanks”. Put sponsor acknowledgments in the unnumbered footnote on the first page.
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%References are important to the reader; therefore, each citation must be complete and correct. If at all possible, references should be commonly available publications.
+
+
+
+\begin{thebibliography}{99}
+
+\bibitem{c1} OECD: Working Group on Heavy Vehicles, ``Regulatory, Operational and Productivity Improvements. Moving freight with better trucks improving safety, productivity and sustainability,'' Organization for Economic Cooperation and Development (OECD), 2009.
+\bibitem{c2} S. Kharrazi, J. Aurell, M.S. Kati, B. Jacobson, N. Frˆjd, and T. Asp, ``Towards performance based standards in Sweden,'' In 13th International Heavy Vehicle Transport Technology Symposium, San Luis, Argentina, 2014.
+\bibitem{c3} HTAS EMS project consortium. ``Book of Requirements: Greening and Safety Assurance of Future Modular Road Vehicles,'' October, 2014.
+\bibitem{c4} J.D. Regehr, J. Montufar, G. Rempel, ``Safety performance of longer combination vehicles relative to other articulated trucks," Canadian Journal of Civil Engineering, 2009, 36:40-49, 10.1139/L08-109.
+\bibitem{c5} P. Sundstr\"om, B. Jacobson, L. Laine,
+``Vectorized single-track model in Modelica for articulated vehicles with arbitrary number of units and axles,'' Modelica conference 2014, Lund, Sweden, March 10-12, 2014.
+\bibitem{c6} Virtual Truck Model, Simulink library developed at Volvo Group Trucks Technology, Department BF72991, 2014.
+\bibitem{c7} T. Blochwitz, M. Otter et al., ``The functional mockup interface for tool independent exchange of simulation models,'' in Proceedings of the 8th International Modelica Conference, Dresden, Germany, 2011.
+\bibitem{c8} M. Th{\"u}mmel, G. Looye, M. Kurze, M, Otter, J. Bals, ``Nonlinear inverse models for control,'' in Proceedings of the 4th International Modelica Conference, Hamburg, Germany, 2005, pp. 267-279.
+\bibitem{c9} S. Janardhanan, ``Function development and verification environment for active safety functions of heavy commercial vehicles,'' Masters' thesis in Automotive Eng., Chalmers Univ. of Tech., Gothenburg, Sweden, 2013.
+\bibitem{c10} P. Fritzson, ``Introduction to Modeling and Simulation of Technical and Physical Systems with Modelica,'' 1st ed. Wiley-IEEE Press, 2011.
+\bibitem{c11} J. Bals, G. Hofer, A. Pfeiffer, C. Schallert, ``Object-oriented inverse modelling of multi-domain aircraft equipment systems and assessment with Modelica,'' in Proceedings of the 3rd International Modelica Conference, Link{\"o}ping, Sweden, 2003, pp. 377-384.
+\bibitem{c12} M. Krabbes, and Ch. Meibner,``Dynamic modeling and control of a 6 DOF parallel kinematics," in Proceedings of the 5th International Modelica Conference, Vienna, Austria, 2006, pp. 385-390.
+\bibitem{c13} M. Th{\"u}mmel, M. Otter, and J. Bals, ``Vibration control of elastic joint robots by inverse dynamics models," IUTAM Symposium on Vibration Control of Nonlinear Mechanisms and Structures, Solid Mechanics and its Applications, Vol. 130, 2005, pp. 343-353.
+\bibitem{c14} M. Th{\"u}mmel, M. Otter, and J. Bals, ``Control of robots with elastic joints based on automatic generation of inverse dynamics models", Proceedings of the 2001 IEEE/RSJ International Conference on Intelligent Robots and Systems, Maui, Hawaii, USA, 2001, pp. 925-930.
+\bibitem{c15} G. Kreisselmeier, ``Struktur mit zwei Freiheitsgraden,"  Automatisierungstechnik, Vol. 6, 1999, pp. 266-269.
+\bibitem{c16} T. B{\"u}nte, A. Sahin, and N. Bajcinca, ``Inversion of vehicle steering dynamics with Modelica/Dymola," in Proceedings of the 4th International Modelica Conference, Hamburg, Germany, 2005, pp. 319-328.
+\bibitem{c17} N. Bajcinca, and T. B{\"u}nte, ``A novel control structure for dynamic inversion and tracking," IFAC World Congress 2005.
+\bibitem{c18} T. Umenco, and Y. Hori, ``Robust speed control of DC servomotors using modern controller design," IEEE Transactions on Industrial Electronics, Vol. 38, No. 5, 1991, pp.363-368. 
+\bibitem{c19} CATIA Systems Engineering - Dymola. Dassault Syst{\'e}mes AB, Lund, Sweden, Available: http://www.3ds.com/products-services/catia/capabilities/modelica-systems-simulation-info/dymola [2014-12-16]. 
+\bibitem{c20}  C. Cheng, and D. Cebon, ``Improving roll stability of articulated heavy vehicles using active semi-trailer steering," Vehicle System Dynamics: International Journal of Vehicle Mechanics and Mobility, Vol. 46, Sup. 1, 2008, pp. 373-388.
+\bibitem{c21} M.M. Islam, ``Parallel design optimization of multi-trailer articulated heavy vehicles with active safety systems," PhD thesis, University of Ontario Institute of Technology, Canada, 2013.
+\bibitem{c22}  C. Cheng, R. Roebuck, A. Odhams, and D. Cebon, ``Highspeed optimal steering of a tractor-semitrailer," Vehicle System Dynamics: International Journal of Vehicle Mechanics and Mobility, Vol. 49, No. 4, 2011, pp. 561-593.
+\bibitem{c23} M.S. Kati, J. Fredriksson, L. Laine, and B. Jacobson, ``Performance improvement for A-double combination by introducing a smart dolly," in Proceedings of the 13th International Heavy Vehicle Transport Technology Symposium, San Luis, Argentina, 2014.
+\bibitem{c24} J. Sandin, A. B\'alint, H. Fagerlind, and S. Kharrazi, ``Traffic safety of heavy goods vehicles and implications for high capacity transport vehicles," in Transport Research Arena, Paris, 2014.
+\bibitem{c25} A. B\'alint, H. Fagerlind, J. Martinsson, and K. Holmqvist, ``Accident analysis for traffic safety aspects of high capacity transports," Final report - v2, Department of Vehicle Safety, Chalmers University of Technology, 2014.
+\bibitem{c26} M.M. Islam, Y. He, S. Zhu, and Q. Wang, ``A comparative study of multi-trailer articulated heavy-vehicle models," in Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Automobile Engineering, 2014, pp. 1-29, doi: 10.1177/0954407014557053.
+%\bibitem{c27} M.S. Kati, J. Fredriksson, L. Laine, B. Jacobson,``Performance Improvement for A-double Combination by introducing a Smart Dolly," in Proceedings of the 13th International Heavy Vehicle Transport Technology Symposium, San Luis, Argentina, 2014.
+
+%\bibitem{c1} G. O. Young, “Synthetic structure of industrial plastics (Book style with paper title and editor),” 	in Plastics, 2nd ed. vol. 3, J. Peters, Ed.  New York: McGraw-Hill, 1964, pp. 15–64.
+%\bibitem{c2} W.-K. Chen, Linear Networks and Systems (Book style).	Belmont, CA: Wadsworth, 1993, pp. 123–135.
+%\bibitem{c3} H. Poor, An Introduction to Signal Detection and Estimation.   New York: Springer-Verlag, 1985, ch. 4.
+%\bibitem{c4} B. Smith, “An approach to graphs of linear forms (Unpublished work style),” unpublished.
+%\bibitem{c5} E. H. Miller, “A note on reflector arrays (Periodical style—Accepted for publication),” IEEE Trans. Antennas Propagat., to be publised.
+%\bibitem{c6} J. Wang, “Fundamentals of erbium-doped fiber amplifiers arrays (Periodical style—Submitted for publication),” IEEE J. Quantum Electron., submitted for publication.
+%\bibitem{c7} C. J. Kaufman, Rocky Mountain Research Lab., Boulder, CO, private communication, May 1995.
+%\bibitem{c8} Y. Yorozu, M. Hirano, K. Oka, and Y. Tagawa, “Electron spectroscopy studies on magneto-optical media and plastic substrate interfaces(Translation Journals style),” IEEE Transl. J. Magn.Jpn., vol. 2, Aug. 1987, pp. 740–741 [Dig. 9th Annu. Conf. Magnetics Japan, 1982, p. 301].
+%\bibitem{c9} M. Young, The Techincal Writers Handbook.  Mill Valley, CA: University Science, 1989.
+%\bibitem{c10} J. U. Duncombe, “Infrared navigation—Part I: An assessment of feasibility (Periodical style),” IEEE Trans. Electron Devices, vol. ED-11, pp. 34–39, Jan. 1959.
+%\bibitem{c11} S. Chen, B. Mulgrew, and P. M. Grant, “A clustering technique for digital communications channel equalization using radial basis function networks,” IEEE Trans. Neural Networks, vol. 4, pp. 570–578, July 1993.
+%\bibitem{c12} R. W. Lucky, “Automatic equalization for digital communication,” Bell Syst. Tech. J., vol. 44, no. 4, pp. 547–588, Apr. 1965.
+%\bibitem{c13} S. P. Bingulac, “On the compatibility of adaptive controllers (Published Conference Proceedings style),” in Proc. 4th Annu. Allerton Conf. Circuits and Systems Theory, New York, 1994, pp. 8–16.
+%\bibitem{c14} G. R. Faulhaber, “Design of service systems with priority reservation,” in Conf. Rec. 1995 IEEE Int. Conf. Communications, pp. 3–8.
+%\bibitem{c15} W. D. Doyle, “Magnetization reversal in films with biaxial anisotropy,” in 1987 Proc. INTERMAG Conf., pp. 2.2-1–2.2-6.
+%\bibitem{c16} G. W. Juette and L. E. Zeffanella, “Radio noise currents n short sections on bundle conductors (Presented Conference Paper style),” presented at the IEEE Summer power Meeting, Dallas, TX, June 22–27, 1990, Paper 90 SM 690-0 PWRS.
+%\bibitem{c17} J. G. Kreifeldt, “An analysis of surface-detected EMG as an amplitude-modulated noise,” presented at the 1989 Int. Conf. Medicine and Biological Engineering, Chicago, IL.
+%\bibitem{c18} J. Williams, “Narrow-band analyzer (Thesis or Dissertation style),” Ph.D. dissertation, Dept. Elect. Eng., Harvard Univ., Cambridge, MA, 1993. 
+%\bibitem{c19} N. Kawasaki, “Parametric study of thermal and chemical nonequilibrium nozzle flow,” M.S. thesis, Dept. Electron. Eng., Osaka Univ., Osaka, Japan, 1993.
+%\bibitem{c20} J. P. Wilkinson, “Nonlinear resonant circuit devices (Patent style),” U.S. Patent 3 624 12, July 16, 1990. 
+
+
+
+
+
+
+\end{thebibliography}
+
+
+
+
+\end{document}
