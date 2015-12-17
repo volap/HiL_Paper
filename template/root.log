@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.5.26)  17 DEC 2015 13:27
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.5.26)  17 DEC 2015 15:04
 entering extended mode
 **root.tex
 (C:\Users\1.5V\Desktop\HiL_Paper\template\root.tex
@@ -1353,7 +1353,7 @@ Package epstopdf Info: Source file: <HIL_overview.eps>
 (epstopdf)                    size: 25838 bytes
 (epstopdf)             Command: <epstopdf --outfile=HIL_overview-eps-converted-
 to.pdf HIL_overview.eps>
-(epstopdf)             \includegraphics on input line 12.
+(epstopdf)             \includegraphics on input line 15.
 Package epstopdf Info: Output file is already uptodate.
 
 <HIL_overview-eps-converted-to.pdf, id=23, 963.6pt x 542.025pt>
@@ -1361,14 +1361,14 @@ File: HIL_overview-eps-converted-to.pdf Graphic file (type pdf)
 
 <use HIL_overview-eps-converted-to.pdf>
 Package pdftex.def Info: HIL_overview-eps-converted-to.pdf used on input line 1
-2.
+5.
 (pdftex.def)             Requested size: 404.71353pt x 227.64894pt.
 )
 (C:\Users\1.5V\Desktop\HiL_Paper\template\Delays.tex)
-(C:\Users\1.5V\Desktop\HiL_Paper\template\Showcase_Maneuver.tex)
+(C:\Users\1.5V\Desktop\HiL_Paper\template\Showcase_Maneuver.tex [2])
 (C:\Users\1.5V\Desktop\HiL_Paper\template\Results.tex)
 (C:\Users\1.5V\Desktop\HiL_Paper\template\Conclusion.tex)
-(C:\Users\1.5V\Desktop\HiL_Paper\template\Related_works.tex [2])
+(C:\Users\1.5V\Desktop\HiL_Paper\template\Related_works.tex)
 (C:\Users\1.5V\Desktop\HiL_Paper\template\Appendix.tex)
 (C:\Users\1.5V\Desktop\HiL_Paper\template\Acknowledgement.tex)
 
@@ -1398,13 +1398,13 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 160.
 Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 160.
  ) 
 Here is how much of TeX's memory you used:
- 30544 strings out of 493706
- 602040 string characters out of 3142168
- 668037 words of memory out of 3000000
- 33322 multiletter control sequences out of 15000+200000
+ 30580 strings out of 493706
+ 602504 string characters out of 3142168
+ 668323 words of memory out of 3000000
+ 33352 multiletter control sequences out of 15000+200000
  63878 words of font info for 147 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 55i,10n,60p,10392b,1372s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 55i,10n,60p,10392b,1402s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Progra
 m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program 
 Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Fil
@@ -1414,9 +1414,9 @@ KTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fo
 nts/type1/urw/times/utmbi8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/
 urw/times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/u
 tmri8a.pfb>
-Output written on root.pdf (4 pages, 131020 bytes).
+Output written on root.pdf (4 pages, 132598 bytes).
 PDF statistics:
- 166 PDF objects out of 1000 (max. 8388607)
- 26 named destinations out of 1000 (max. 500000)
+ 173 PDF objects out of 1000 (max. 8388607)
+ 32 named destinations out of 1000 (max. 500000)
  162 words of extra memory for PDF output out of 10000 (max. 10000000)
 
