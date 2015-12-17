@@ -3,7 +3,13 @@
 \begin{document}
 	
 	{\pagestyle{empty}}
-	\section{Delays}
+	\section{Delays and characteristics}
 	\label{chap:Delays}
+	
+	Around the middle-position the steering does not react towards small changes, the legacy system has a dead-band of $+-$2 degree. For the original application this is useful to ensure a straight path of the vehicle. For this experimental platform however consistent control over the complete range is desirable, also enabling small articulations of the axles which is especially called for at higher speeds. 
+	
+	If a constant steering-angle is requested over a certain period, the hydraulic system will slowly fall back to the middle position. This needs to be eliminated because turning maneuvers or shunting-situations often require maximum articulation for longer timespan.
+	
+	The steering system has a response time, composed of the normal inertias of the hydraulic system and an additional delay introduced by filtering and noise-canceling in the legacy system. 
 	
 \end{document}

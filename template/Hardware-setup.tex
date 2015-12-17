@@ -7,17 +7,15 @@
 \label{chap:Hardware-Setup}
 \subsection{Base vehicle}
 
-The hardware base is a dolly manufactured by Parator Industries. The steering system is based around the \gls{ETS} developed and built by \gls{VSE} with two hydraulically steerable axles. It was originally meant to be used in trailer steering and as an after-market system does not tie in with any of the truck's communication networks or sensor data. This makes it OEM-independent and very robust. The \gls{ETS} solely relies on the articulation angle between the leading and following unit on which the system is mounted and the speed of the combination. The articulation angle is gathered via a dedicated sensor mounted on the king-pin, the speed-signal is gathered from the ISO-11992 \gls{CAN}.
+The hardware base is a dolly manufactured by Parator Industries. The steering system is based around the \gls{ETS} developed and built by \gls{VSE} with two hydraulically steerable axles. It was originally meant to be used in trailer steering as an after-market system and thus does not tie in with any of the truck's communication networks or sensor data. This makes it OEM-independent and very robust. The \gls{ETS} solely relies on the articulation angle between the leading and following unit and the speed of the combination. The articulation angle is gathered via a dedicated sensor mounted on the king-pin of the respective unit, the speed-signal is gathered from the ISO-11992 \gls{CAN}. 
 
 \subsection{Rapid-prototyping system (\gls{MABII})}
 
-To execute the readily developed algorithms\cite{c27}, that govern the steering of the \gls{HCT}-combination needed to be ported to a platform, capable of interacting with the dolly and the tractor, while ensuring robust behavior during run-time. It was decided to incorporate the \gls{MABII} by dSpace, a real-time platform for its advantages in automotive environments with a vast selection of in- and outputs for interfacing with vehicular communications systems (\gls{CAN}, ethernet, FlexLink). It conveniently ties in with Simulink, which was used for algorithm development, for code-generation. Furthermore it physically is very robust and has good logging possibilities.
+To execute the readily developed algorithms\cite{c27}, that govern the steering of the \gls{HCT}-combination, they needed to be ported to a platform, capable of interacting with the dolly and the tractor, while ensuring robust behavior during run-time. It was decided to incorporate the \gls{MABII} by dSpace, a real-time platform for its advantages in automotive environments with a vast selection of in- and outputs for interfacing with vehicular communications systems (\gls{CAN}, ethernet, FlexLink). It conveniently ties in with Simulink, which was used for algorithm development, for code-generation. Furthermore it physically is very robust and has good logging possibilities.
 
 
 \subsection{Arduino}
 
-To convert from \gls{CAN}-messages to serial output an Arduino Due together with a MCP2551 \gls{CAN}-transceiver was used. This provided the feedback-loop from the hardware-system to the simulation environment during the \gls{HIL}-testing.
-
-\subsection{interconnections between MABII/dolly/truck}
+To convert from \gls{CAN}-messages to serial data directly usable in the real-time simulation, an Arduino Due together with a MCP2551 \gls{CAN}-transceiver was used. This provided the feedback-loop from the hardware-system to the simulation environment during the \gls{HIL}-testing. 
 
 \end{document}

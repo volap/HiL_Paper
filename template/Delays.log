@@ -1,9 +1,19 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.5.26)  17 DEC 2015 13:27
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.5.26)  17 DEC 2015 13:10
 entering extended mode
-**root.tex
-(C:\Users\1.5V\Desktop\HiL_Paper\template\root.tex
+**Delays.tex
+(C:\Users\1.5V\Desktop\HiL_Paper\template\Delays.tex
 LaTeX2e <2014/05/01>
 Babel <3.9k> and hyphenation patterns for 68 languages loaded.
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\subfiles\subfiles.cls"
+Document Class: subfiles 2012/05/23 Federico Garcia
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\verbatim.sty"
+Package: verbatim 2003/08/22 v1.5q LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks14
+\verbatim@line=\toks15
+\verbatim@in@stream=\read1
+)
+Preamble taken from file `root.tex'
+(C:\Users\1.5V\Desktop\HiL_Paper\template\root.tex
 (C:\Users\1.5V\Desktop\HiL_Paper\template\IEEEconf.cls
 
 LaTeX Warning: You have requested document class `IEEEconf',
@@ -14,7 +24,7 @@ Document Class: cssconf 2004/1/15 revision V1.6b by Pradeep Misra
 \@IEEEtrantmpdimenB=\dimen103
 \@IEEEtrantmpcountA=\count79
 \@IEEEtrantmpcountB=\count80
-\@IEEEtrantmptoksA=\toks14
+\@IEEEtrantmptoksA=\toks16
 LaTeX Font Info:    Try loading font information for OT1+ptm on input line 794.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\ot1ptm.fd"
@@ -131,7 +141,7 @@ Package: graphicx 2014/04/25 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
 Package: keyval 2014/05/08 v1.15 key=value parser (DPC)
-\KV@toks@=\toks15
+\KV@toks@=\toks17
 )
 \Gin@req@height=\dimen113
 \Gin@req@width=\dimen114
@@ -188,7 +198,7 @@ Package: amstext 2000/06/29 v2.01
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
 File: amsgen.sty 1999/11/30 v2.0
-\@emptytoks=\toks16
+\@emptytoks=\toks18
 \ex@=\dimen117
 ))
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
@@ -218,21 +228,21 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 \dotsspace@=\muskip10
 \c@parentequation=\count99
 \dspbrk@lvl=\count100
-\tag@help=\toks17
+\tag@help=\toks19
 \row@=\count101
 \column@=\count102
 \maxfields@=\count103
-\andhelp@=\toks18
+\andhelp@=\toks20
 \eqnshift@=\dimen120
 \alignsep@=\dimen121
 \tagshift@=\dimen122
 \tagwidth@=\dimen123
 \totwidth@=\dimen124
 \lineht@=\dimen125
-\@envbody=\toks19
+\@envbody=\toks21
 \multlinegap=\skip48
 \multlinetaggap=\skip49
-\mathdisplay@stack=\toks20
+\mathdisplay@stack=\toks22
 LaTeX Info: Redefining \[ on input line 2665.
 LaTeX Info: Redefining \] on input line 2666.
 )
@@ -256,8 +266,8 @@ Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
 Package: xkeyval 2014/05/09 v2.6d package option processing (HA)
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\xkeyval\xkeyval.tex"
-\XKV@toks=\toks21
-\XKV@tempa@toks=\toks22
+\XKV@toks=\toks23
+\XKV@tempa@toks=\toks24
 \XKV@depth=\count104
 File: xkeyval.tex 2014/05/09 v2.6d key=value parser (HA)
 ))
@@ -273,8 +283,8 @@ Package: etex 1998/03/26 v2.0 eTeX basic definition package (PEB)
 )
 \etb@tempcnta=\count106
 )
-\@glsmfirst=\toks23
-\@glsmrest=\toks24
+\@glsmfirst=\toks25
+\@glsmrest=\toks26
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\textcase\textcase.sty"
 Package: textcase 2004/10/07 v0.07 Text only upper/lower case changing (DPC)
@@ -340,7 +350,7 @@ Package: fp-upn 1996/10/21
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\fp\fp-eval.sty"
 Package: fp-eval 1995/04/03
 )))
-\@dtl@toks=\toks25
+\@dtl@toks=\toks27
 \@dtl@tmpcount=\count119
 \dtl@tmplength=\skip50
 \dtl@sortresult=\count120
@@ -355,12 +365,12 @@ ible-307.sty"
 Package: glossaries-compatible-307 2013/11/14 v4.0 (NLCT)
 )
 \gls@level=\count126
-\@gls@tmpb=\toks26
+\@gls@tmpb=\toks28
 \gls@tmplen=\skip51
-\glskeylisttok=\toks27
-\glslabeltok=\toks28
-\glsshorttok=\toks29
-\glslongtok=\toks30
+\glskeylisttok=\toks29
+\glslabeltok=\toks30
+\glsshorttok=\toks31
+\glslongtok=\toks32
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\glossaries\styles\glossary-hypern
 av.sty"
@@ -390,7 +400,7 @@ Package: longtable 2004/02/01 v4.11 Multi-page Table package (DPC)
 \LT@rows=\count129
 \c@LT@tables=\count130
 \c@LT@chunks=\count131
-\LT@p@ftn=\toks31
+\LT@p@ftn=\toks33
 )
 \glsdescwidth=\skip57
 \glspagelistwidth=\skip58
@@ -423,13 +433,7 @@ Package: glossary-tree 2014/08/27 v4.10 (NLCT)
 \glstreeindent=\skip62
 )) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\subfiles\subfiles.sty"
 Package: subfiles 2012/05/23 Federico Garcia
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\verbatim.sty"
-Package: verbatim 2003/08/22 v1.5q LaTeX2e package for verbatim enhancements
-\every@verbatim=\toks32
-\verbatim@line=\toks33
-\verbatim@in@stream=\read1
-))
+)
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\siunitx\siunitx.sty"
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\l3kernel\expl3.sty"
 Package: expl3 2014/05/06 v4751 L3 programming layer (loader) 
@@ -1127,12 +1131,16 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\auxhook.sty"
 Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
+
+
+Package auxhook Warning: Cannot patch \document,
+(auxhook)                using \AtBeginDocument instead.
+
 )
 \@linkdim=\dimen283
 \Hy@linkcounter=\count198
 \Hy@pagecounter=\count199
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\pd1enc.def"
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\pd1enc.def"
 File: pd1enc.def 2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
 )
 \Hy@SavedSpaceFactor=\count200
@@ -1196,9 +1204,9 @@ File: bkm-pdftex.def 2011/12/02 v1.24 bookmark driver for pdfTeX (HO)
 ))
 \glswrite=\write4
 \glo@main@file=\write5
-Package glossaries Info: Writing glossary file root.glo on input line 37.
+Package glossaries Info: Writing glossary file Delays.glo on input line 37.
 \glo@acronym@file=\write6
-Package glossaries Info: Writing glossary file root.acn on input line 37.
+Package glossaries Info: Writing glossary file Delays.acn on input line 37.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\librarie
 s\tikzlibraryarrows.code.tex"
@@ -1222,22 +1230,22 @@ File: tikzlibraryshapes.geometric.code.tex 2008/01/09 v3.0.0 (rcs-revision 1.1)
 shapes.geometric.code.tex"
 File: pgflibraryshapes.geometric.code.tex 2008/06/26 v3.0.0 (rcs-revision 1.1)
 ))
-(C:\Users\1.5V\Desktop\HiL_Paper\template\glossary.tex)
-(C:\Users\1.5V\Desktop\HiL_Paper\template\root.aux)
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
+(C:\Users\1.5V\Desktop\HiL_Paper\template\glossary.tex)))
+(C:\Users\1.5V\Desktop\HiL_Paper\template\Delays.aux)
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -1262,7 +1270,7 @@ Dictionary: translator-basic-dictionary, Language: English
 File: siunitx-abbreviations.cfg 2015/01/21 v2.6e siunitx: Abbreviated units
 ) ABD: EveryShipout initializing macros
 \AtBeginShipoutBox=\box68
-Package hyperref Info: Link coloring OFF on input line 60.
+Package hyperref Info: Link coloring OFF on input line 3.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -1272,105 +1280,38 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count290
 )
-LaTeX Info: Redefining \ref on input line 60.
-LaTeX Info: Redefining \pageref on input line 60.
-LaTeX Info: Redefining \nameref on input line 60.
-\c__siunitx_mathsf_int=\count291
-LaTeX Font Info:    Try loading font information for OT1+ztmcm on input line 60
-.
+LaTeX Info: Redefining \ref on input line 3.
+LaTeX Info: Redefining \pageref on input line 3.
+LaTeX Info: Redefining \nameref on input line 3.
+LaTeX Font Info:    Try loading font information for OT1+ztmcm on input line 9.
+
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\ot1ztmcm.fd"
 File: ot1ztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ztmcm.
 )
-LaTeX Font Info:    Try loading font information for OML+ztmcm on input line 60
-.
+LaTeX Font Info:    Try loading font information for OML+ztmcm on input line 9.
+
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\omlztmcm.fd"
 File: omlztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ztmcm.
 )
-LaTeX Font Info:    Try loading font information for OMS+ztmcm on input line 60
-.
+LaTeX Font Info:    Try loading font information for OMS+ztmcm on input line 9.
+
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\omsztmcm.fd"
 File: omsztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/ztmcm.
 )
-LaTeX Font Info:    Try loading font information for OMX+ztmcm on input line 60
-.
+LaTeX Font Info:    Try loading font information for OMX+ztmcm on input line 9.
+
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\omxztmcm.fd"
 File: omxztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/ztmcm.
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 60.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 9.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 60.
-\c__siunitx_mathtt_int=\count292
-LaTeX Font Info:    Calculating math sizes for size <11> on input line 65.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8.14006> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 65.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6.60007> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 65.
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 65.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 9.
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\ot1pcr.fd"
-File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
-)
-Underfull \hbox (badness 10000) in paragraph at lines 65--65
-\OT1/ptm/m/n/8 Swe-den, \OT1/pcr/m/n/9 michael.hofmann@alumni.chalmers.se\OT1/p
-tm/m/n/8 ,
- []
-
-(C:\Users\1.5V\Desktop\HiL_Paper\template\Introduction.tex)
-(C:\Users\1.5V\Desktop\HiL_Paper\template\Hardware-setup.tex
-Underfull \hbox (badness 10000) in paragraph at lines 12--12
- \OT1/ptm/m/it/10 B. Rapid-prototyping sys-tem ([]dSpace Mi-croAu-to-BoxII
- []
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\gls' on input line 12.
-
-) (C:\Users\1.5V\Desktop\HiL_Paper\template\Software-setup.tex [1{C:/ProgramDat
-a/MiKTeX/2.9/pdftex/config/pdftex.map}
-
-
-]
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\gls' on input line 10.
-
-
-Underfull \hbox (badness 1701) in paragraph at lines 12--13
-[]\OT1/ptm/m/n/10 To eval-u-ate the dy-namic per-for-mance of the []HCT-
- []
-
-) (C:\Users\1.5V\Desktop\HiL_Paper\template\HiL-architecture.tex
-Package epstopdf Info: Source file: <HIL_overview.eps>
-(epstopdf)                    date: 2015-06-01 08:53:16
-(epstopdf)                    size: 106804 bytes
-(epstopdf)             Output file: <HIL_overview-eps-converted-to.pdf>
-(epstopdf)                    date: 2015-06-23 10:07:22
-(epstopdf)                    size: 25838 bytes
-(epstopdf)             Command: <epstopdf --outfile=HIL_overview-eps-converted-
-to.pdf HIL_overview.eps>
-(epstopdf)             \includegraphics on input line 12.
-Package epstopdf Info: Output file is already uptodate.
-
-<HIL_overview-eps-converted-to.pdf, id=23, 963.6pt x 542.025pt>
-File: HIL_overview-eps-converted-to.pdf Graphic file (type pdf)
-
-<use HIL_overview-eps-converted-to.pdf>
-Package pdftex.def Info: HIL_overview-eps-converted-to.pdf used on input line 1
-2.
-(pdftex.def)             Requested size: 404.71353pt x 227.64894pt.
-)
-(C:\Users\1.5V\Desktop\HiL_Paper\template\Delays.tex)
-(C:\Users\1.5V\Desktop\HiL_Paper\template\Showcase_Maneuver.tex)
-(C:\Users\1.5V\Desktop\HiL_Paper\template\Results.tex)
-(C:\Users\1.5V\Desktop\HiL_Paper\template\Conclusion.tex)
-(C:\Users\1.5V\Desktop\HiL_Paper\template\Related_works.tex [2])
-(C:\Users\1.5V\Desktop\HiL_Paper\template\Appendix.tex)
-(C:\Users\1.5V\Desktop\HiL_Paper\template\Acknowledgement.tex)
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -1387,36 +1328,33 @@ Package glossaries Warning: No \printglossary or \printglossaries found.
 (Remove \makeglossaries if you don't want any glossaries.)
 This document will not have a glossary.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 160.
-[3
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 15.
+[1
 
-] [4 <C:/Users/1.5V/Desktop/HiL_Paper/template/HIL_overview-eps-converted-to.pd
-f>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 160.
- (C:\Users\1.5V\Desktop\HiL_Paper\template\root.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 160.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 160.
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}
+
+]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 15.
+
+(C:\Users\1.5V\Desktop\HiL_Paper\template\Delays.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 15.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 15.
  ) 
 Here is how much of TeX's memory you used:
- 30544 strings out of 493706
- 602040 string characters out of 3142168
- 668037 words of memory out of 3000000
- 33322 multiletter control sequences out of 15000+200000
- 63878 words of font info for 147 fonts, out of 3000000 for 9000
+ 30343 strings out of 493706
+ 598622 string characters out of 3142168
+ 658514 words of memory out of 3000000
+ 33199 multiletter control sequences out of 15000+200000
+ 36294 words of font info for 81 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 55i,10n,60p,10392b,1372s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 64i,5n,62p,10418b,1372s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Progra
-m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program 
-Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Fil
-es (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files
- (x86)/MiKTeX 2.9/fonts/type1/urw/courier/ucrr8a.pfb><C:/Program Files (x86)/Mi
-KTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fo
-nts/type1/urw/times/utmbi8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/
-urw/times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/u
-tmri8a.pfb>
-Output written on root.pdf (4 pages, 131020 bytes).
+m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program F
+iles (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Fil
+es (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb>
+Output written on Delays.pdf (1 page, 32823 bytes).
 PDF statistics:
- 166 PDF objects out of 1000 (max. 8388607)
- 26 named destinations out of 1000 (max. 500000)
- 162 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 32 PDF objects out of 1000 (max. 8388607)
+ 3 named destinations out of 1000 (max. 500000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
