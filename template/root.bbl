@@ -16,6 +16,32 @@
   {}
 \endgroup
 
+\entry{Lowspeed_paper}{article}{}
+  \name{author}{3}{}{%
+    {{}%
+     {Islam}{I.}%
+     {Mohammad~Manjurul}{M.~M.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Laine}{L.}%
+     {Leo}{L.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Jacobson}{J.}%
+     {Bengt}{B.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{IMMLLJB1}
+  \strng{fullhash}{IMMLLJB1}
+  \field{sortinit}{I}
+  \field{title}{Improve Safety by Optimal Steering Control of a Converter Dolly
+  using Particle Swarm Optimization for Low-Speed Maneuvers}
+  \field{year}{2016}
+\endentry
+
 \entry{automotive_software_engineering}{book}{}
   \name{author}{2}{}{%
     {{}%

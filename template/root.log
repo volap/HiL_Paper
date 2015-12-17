@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.12.17)  17 DEC 2015 15:18
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.12.17)  17 DEC 2015 16:03
 entering extended mode
 **./root.tex
 (root.tex
@@ -21,17 +21,12 @@ LaTeX Font Info:    Try loading font information for OT1+ptm on input line 794.
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 \@IEEEnormalsizefontbaselineskip=\skip41
--- This is a 10 point document.
+-- This is an 11 point document.
 \normalsizebaselineskip=\skip42
 \normaljot=\skip43
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1113.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <5> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1113.
-
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1113.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <7> not available
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <6> not available
 (Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1113.
 
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
@@ -59,9 +54,9 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <12> not available
 (Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1113.
 
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <16> not available
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <17> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1113.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <16> not available
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <17> not available
 (Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1113.
 
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <20> not available
@@ -1580,6 +1575,7 @@ Package biblatex Info: ... file 'root.bbl' found.
 Package biblatex Info: Reference section=0 on input line 62.
 Package biblatex Info: Reference segment=0 on input line 62.
 \c__siunitx_mathsf_int=\count400
+LaTeX Font Info:    Calculating math sizes for size <11> on input line 62.
 LaTeX Font Info:    Try loading font information for OT1+ztmcm on input line 62
 .
 
@@ -1608,39 +1604,40 @@ LaTeX Font Info:    Try loading font information for OMX+ztmcm on input line 62
 "
 File: omxztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/ztmcm.
 )
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8.14006> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 62.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6.60007> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 62.
 \c__siunitx_mathtt_int=\count401
-LaTeX Font Info:    Calculating math sizes for size <11> on input line 67.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8.14006> not available
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 67.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6.60007> not available
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 67.
 LaTeX Font Info:    Try loading font information for OT1+pcr on input line 67.
  ("C:\Users\sebas\AppData\Local\Programs\MiKTeX 2.9\tex\latex\psnfss\ot1pcr.fd"
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
 Underfull \hbox (badness 10000) in paragraph at lines 67--67
-\OT1/ptm/m/n/8 Swe-den, \OT1/pcr/m/n/9 michael.hofmann@alumni.chalmers.se\OT1/p
-tm/m/n/8 ,
- []
-
-(Introduction.tex) (Hardware-setup.tex
-Underfull \hbox (badness 10000) in paragraph at lines 12--12
- \OT1/ptm/m/it/10 B. Rapid-prototyping sys-tem ([]dSpace Mi-croAu-to-BoxII
+[][][]$[]$\OT1/ptm/m/n/9 Vehicle En-gi-neer-ing and Au-tonomous Sys-tems,
  []
 
 
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\gls' on input line 12.
+Underfull \hbox (badness 10000) in paragraph at lines 67--67
+\OT1/ptm/m/n/9 De-part-ment of Ap-plied Me-chan-ics, Chalmers Uni-ver-sity
+ []
 
 
-LaTeX Warning: Citation 'c27' on page 1 undefined on input line 14.
+Underfull \hbox (badness 10000) in paragraph at lines 67--67
+\OT1/ptm/m/n/9 of Tech-nol-ogy, SE-412 96 G[]OTEBORG, Swe-den,
+ []
 
-) (Software-setup.tex [1{C:/Users/sebas/AppData/Local/MiKTeX/2.9/pdftex/config/
-pdftex.map}
+
+Underfull \hbox (badness 10000) in paragraph at lines 67--67
+\OT1/pcr/m/n/10 michael.hofmann@alumni.chalmers.se\OT1/ptm/m/n/9 ,
+ []
+
+(Introduction.tex) (Hardware-setup.tex [1{C:/Users/sebas/AppData/Local/MiKTeX/2
+.9/pdftex/config/pdftex.map}
 
 \openout5 = `root.ist'.
 
@@ -1648,11 +1645,24 @@ pdftex.map}
 ]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\gls' on input line 12.
+
+
+LaTeX Warning: Citation 'c27' on page 2 undefined on input line 14.
+
+
+Underfull \hbox (badness 1622) in paragraph at lines 19--20
+\OT1/ptm/m/n/11 rectly us-able in the real-time sim-u-la-tion, an Ar-
+ []
+
+) (Software-setup.tex
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\gls' on input line 10.
 
 
-Underfull \hbox (badness 1701) in paragraph at lines 12--13
-[]\OT1/ptm/m/n/10 To eval-u-ate the dy-namic per-for-mance of the []HCT-
+Underfull \hbox (badness 1796) in paragraph at lines 16--17
+[]\OT1/ptm/m/n/11 dSpace's rapid-prototyping plat-form's con-nec-tion
  []
 
 ) (HiL-architecture.tex
@@ -1664,7 +1674,7 @@ Package epstopdf Info: Source file: <HIL_overview.eps>
 (epstopdf)                    size: 25838 bytes
 (epstopdf)             Command: <epstopdf --outfile=HIL_overview-eps-converted-
 to.pdf HIL_overview.eps>
-(epstopdf)             \includegraphics on input line 12.
+(epstopdf)             \includegraphics on input line 15.
 Package epstopdf Info: Output file is already uptodate.
 
 <HIL_overview-eps-converted-to.pdf, id=25, 963.6pt x 542.025pt>
@@ -1672,9 +1682,9 @@ File: HIL_overview-eps-converted-to.pdf Graphic file (type pdf)
 
 <use HIL_overview-eps-converted-to.pdf>
 Package pdftex.def Info: HIL_overview-eps-converted-to.pdf used on input line 1
-2.
+5.
 (pdftex.def)             Requested size: 404.71353pt x 227.64894pt.
-
+ [2]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
@@ -1683,61 +1693,47 @@ Package epstopdf Info: Source file: <front.eps>
 (epstopdf)                    date: 2015-12-17 13:17:35
 (epstopdf)                    size: 260648 bytes
 (epstopdf)             Output file: <front-eps-converted-to.pdf>
-(epstopdf)                    date: 2015-12-17 14:41:33
+(epstopdf)                    date: 2015-12-17 15:24:25
 (epstopdf)                    size: 15871 bytes
 (epstopdf)             Command: <epstopdf --outfile=front-eps-converted-to.pdf 
 front.eps>
-(epstopdf)             \includegraphics on input line 15.
+(epstopdf)             \includegraphics on input line 20.
 Package epstopdf Info: Output file is already uptodate.
- <front-eps-converted-to.pdf, id=26, 460.72125pt x 270.00874pt>
+ <front-eps-converted-to.pdf, id=38, 460.72125pt x 270.00874pt>
 File: front-eps-converted-to.pdf Graphic file (type pdf)
 
 <use front-eps-converted-to.pdf>
-Package pdftex.def Info: front-eps-converted-to.pdf used on input line 15.
+Package pdftex.def Info: front-eps-converted-to.pdf used on input line 20.
 (pdftex.def)             Requested size: 245.71811pt x 144.0021pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
 ) (Showcase_Maneuver.tex
 Package epstopdf Info: Source file: <xy_HIL_and_VTM.eps>
 (epstopdf)                    date: 2015-12-17 12:54:13
 (epstopdf)                    size: 450318 bytes
 (epstopdf)             Output file: <xy_HIL_and_VTM-eps-converted-to.pdf>
-(epstopdf)                    date: 2015-12-17 14:30:59
+(epstopdf)                    date: 2015-12-17 15:24:25
 (epstopdf)                    size: 75455 bytes
 (epstopdf)             Command: <epstopdf --outfile=xy_HIL_and_VTM-eps-converte
 d-to.pdf xy_HIL_and_VTM.eps>
-(epstopdf)             \includegraphics on input line 15.
+(epstopdf)             \includegraphics on input line 12.
 Package epstopdf Info: Output file is already uptodate.
 
-<xy_HIL_and_VTM-eps-converted-to.pdf, id=27, 354.32375pt x 283.0575pt>
+<xy_HIL_and_VTM-eps-converted-to.pdf, id=39, 354.32375pt x 283.0575pt>
 File: xy_HIL_and_VTM-eps-converted-to.pdf Graphic file (type pdf)
 
 <use xy_HIL_and_VTM-eps-converted-to.pdf>
 Package pdftex.def Info: xy_HIL_and_VTM-eps-converted-to.pdf used on input line
- 15.
+ 12.
 (pdftex.def)             Requested size: 245.71811pt x 196.29895pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-) (Results.tex) (Conclusion.tex) (Related_works.tex [2]) (Appendix.tex)
-(Acknowledgement.tex)
-
-! LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.157 
-      
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-Overfull \vbox (336.63315pt too high) has occurred while \output is active []
-
-
-[3 <./HIL_overview-eps-converted-to.pdf> <./front-eps-converted-to.pdf> <./xy_H
-IL_and_VTM-eps-converted-to.pdf>]
+) (Results.tex) (Conclusion.tex) (Related_works.tex) (Appendix.tex)
+(Acknowledgement.tex) [3]
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -1755,27 +1751,16 @@ Package glossaries Warning: No \printglossary or \printglossaries found.
 This document will not have a glossary.
 
 
-! LaTeX Error: \begin{thebibliography} on input line 120 ended by \end{document
-}.
+Overfull \vbox (336.07933pt too high) has occurred while \output is active []
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.158 \end{document}
-                    
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 158.
-[4
-
-]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 158.
+[4 <./HIL_overview-eps-converted-to.pdf> <./front-eps-converted-to.pdf> <./xy_H
+IL_and_VTM-eps-converted-to.pdf>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 123.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 123.
  (root.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 158.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 158.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 123.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 123.
 
 
 LaTeX Warning: There were undefined references.
@@ -1788,33 +1773,28 @@ Package biblatex Warning: Please (re)run BibTeX on the file(s):
 Package logreq Info: Writing requests to 'root.run.xml'.
 \openout1 = `root.run.xml'.
 
- )
-(\end occurred inside a group at level 1)
-
-### semi simple group (level 1) entered at line 120 (\begingroup)
-### bottom level 
+ ) 
 Here is how much of TeX's memory you used:
- 37351 strings out of 493634
- 724603 string characters out of 3135238
- 1033406 words of memory out of 3000000
- 40129 multiletter control sequences out of 15000+200000
- 64985 words of font info for 148 fonts, out of 3000000 for 9000
+ 37381 strings out of 493634
+ 724939 string characters out of 3135238
+ 1031678 words of memory out of 3000000
+ 40146 multiletter control sequences out of 15000+200000
+ 61751 words of font info for 141 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 55i,10n,60p,10378b,1581s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Users/sebas/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvi
-ps/fontname/8r.enc}<C:/Users/sebas/AppData/Local/Programs/MiKTeX 2.9/fonts/type
-1/public/amsfonts/cm/cmmi10.pfb><C:/Users/sebas/AppData/Local/Programs/MiKTeX 2
-.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/sebas/AppData/Local/Progr
-ams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/sebas/AppDat
-a/Local/Programs/MiKTeX 2.9/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/sebas/
-AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Users/se
-bas/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.pfb><C:/Use
-rs/sebas/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:
-/Users/sebas/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pf
-b>
-Output written on root.pdf (4 pages, 221187 bytes).
+ 55i,10n,60p,10378b,1400s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Users/sebas/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/fontname/8r
+.enc}<C:/Users/sebas/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfo
+nts/cm/cmmi10.pfb><C:/Users/sebas/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
+/public/amsfonts/cm/cmr10.pfb><C:/Users/sebas/AppData/Local/Programs/MiKTeX 2.9
+/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/sebas/AppData/Local/Progra
+ms/MiKTeX 2.9/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/sebas/AppData/Local/
+Programs/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Users/sebas/AppData/Lo
+cal/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/sebas/AppDa
+ta/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Users/sebas/A
+ppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
+Output written on root.pdf (4 pages, 223699 bytes).
 PDF statistics:
- 189 PDF objects out of 1000 (max. 8388607)
- 28 named destinations out of 1000 (max. 500000)
- 172 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 195 PDF objects out of 1000 (max. 8388607)
+ 34 named destinations out of 1000 (max. 500000)
+ 164 words of extra memory for PDF output out of 10000 (max. 10000000)
 
