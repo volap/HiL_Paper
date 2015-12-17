@@ -69,7 +69,7 @@ Development and evaluation of an experimental platform for steered axles of long
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{abstract}
 
-\gls{HCT}-vehicles require different strategies in controlling lateral dynamics of the combinations to ensure optimal paths taken by the trailers. These steering algorithms have been developed in previous works and now need to be verified on the track. This work thus implemented a dolly experimentation platform incorporating a rapid-prototyping system to provide the possibility of evaluating these algorithms. The solution is detailed as a \gls{HIL}-test linked with a vehicle dynamics frame-work in this publication. Results for this setups utilizing the aforementioned algorithms are presented and discussed. Nevertheless it is possible to run the outlined solution on-track, for which some suggestions are given at the end of this work.
+\gls{HCT}-vehicles require different strategies in controlling lateral dynamics of the combinations to ensure optimal paths taken by the trailers. Promising steering algorithms actuating more then one axles of the combination have been developed in previous works !!!!MI-paper quote!!!!! and now need to be verified in the field. This work thus developed an experimentation platform incorporating a rapid-prototyping system to provide the possibility of evaluating these algorithms. In this publication the solution is detailed as a \gls{HIL}-platform linking a vehicle dynamics frame-work with two steered axles. In accordance with the automotive development process after the V-model, this allows to safely verify the functioning of both software and hardware before performing track-tests of the fully integrated system. This paper outlines the development and capabilities of the resulting experimental platform and gives a short example of its performance in a standard-maneuver, which is also used to proof the validity between simulation and \gls{HIL}-environment enabling full system testing.
 
 \end{abstract}
 
@@ -79,7 +79,7 @@ Development and evaluation of an experimental platform for steered axles of long
 
 The driving behaviour of \gls{HCT} vehicles is in many ways different to that of single unit trucks and needs to be researched in great detail to gain an understanding of the vehicle's dynamic properties, that is equally detailed as it is for other vehicle classes. This will lead to development of better safety and assistance systems and thus reduce threat potential, accidents and fatalities involving this emerging mode of transportation. 
 
-The research project in which this thesis is embedded aims to develop an active dolly, meaning that steering will be autonomously conducted by the dolly based on the driving situation at hand and various vehicle parameters (e.g. speed, steering wheel angle).
+The research project in which this work is embedded aims to develop an active dolly, meaning that steering will be autonomously conducted by the dolly based on the driving situation at hand and various vehicle parameters (e.g. speed, steering wheel angle).
 This abstract control algorithm will be executed on a rapid-prototyping system which is linked to and controls the dolly. To supply this connection between the hardware and control-algorithm implemented in the modeling-environment Simulink is the main-contribution of this work. 
 
 
@@ -149,8 +149,9 @@ As the simulation is executed on the \gls{MABII} it is possible to access repres
 
 \section{Showcase Maneuver}
 
-To briefly show the general functioning and to give the reader insight into a practical application of the project, a standard driving maneuver was performed on the platform. As an example the U-turn was chosen, for its relevance in everyday driving and the fact that it shows some of the characteristics of \gls{HCT}-combinations distinctively. It was executed at a longitudinal speed of $2m/s$, thus resulting in a turning radius of approx. 16m. To eliminate ensure consistent behaviour over all measurements, the steering-angles of the truck where pre-programmed.
+To briefly show the general functioning and to give the reader insight into a practical application of the project, a standard driving maneuver was performed on the platform. As an example the U-turn was chosen, for its relevance in everyday driving and the fact that it shows some of the characteristics of \gls{HCT}-combinations distinctively. It was executed at a longitudinal speed of $2m/s$, thus resulting in a turning radius of approx. 16m. To eliminate ensure consistent behaviour over all measurements, the steering-angles of the truck were pre-programmed.
 
+Figure !!!!!8.11!!!!! shows the be behaviour of the different units of the combination both for the developed platform in its \gls{HIL}-configuration as well as the performance in the simulation environment. This gives the opportunity to compare between the two different stages of abstraction in the V-model, thus verifying the correct functioning of the actuated axles before executing further testing in the V-model on the test-track. 
 
 \begin{itemize}
 	\item explain off-tracking as a measure 
