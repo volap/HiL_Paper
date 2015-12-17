@@ -1,0 +1,46 @@
+% $ biblatex auxiliary file $
+% $ biblatex version 2.5 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\entry{automotive_software_engineering}{book}{}
+  \name{author}{2}{}{%
+    {{}%
+     {Sch{\"a}uffele}{S.}%
+     {J{\"o}rg}{J.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Zurawka}{Z.}%
+     {Thomas}{T.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Springer-Verlag}%
+  }
+  \strng{namehash}{SJZT1}
+  \strng{fullhash}{SJZT1}
+  \field{sortinit}{S}
+  \field{title}{Automotive software engineering: Grundlagen, Prozesse, Methoden
+  und Werkzeuge effizient einsetzen}
+  \field{year}{2012}
+\endentry
+
+\lossort
+\endlossort
+
+\endinput

@@ -1,5 +1,8 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: root.aux
-I found no \citation commands---while reading file root.aux
-I found no \bibdata command---while reading file root.aux
-I found no \bibstyle command---while reading file root.aux
-(There were 3 error messages)
+The style file: biblatex.bst
+Database file #1: root-blx.bib
+Database file #2: ExampleBib.bib
+Warning--I didn't find a database entry for "a"
+Warning--I didn't find a database entry for "c27"
+Biblatex version: 3.0
+(There were 2 warnings)
