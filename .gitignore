@@ -41,3 +41,16 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+template/root.acn
+template/root.run.xml
+template/root.blg
+*.pdf
+template/root-blx.bib
+template/root.synctex.gz
+template/root-blx.bib
+*.pdf
+template/root.acn
+template/root.log
+*.pdf
+template/root.synctex.gz
+*.pdf
