@@ -6,9 +6,11 @@
 \section{Hardware-Setup}
 \label{chap:Hardware-Setup}
 \subsection{Base vehicle}
+\label{sec:basevehicle}
 
 The hardware base is a dolly manufactured by Parator Industries. The steering system is based around the \gls{ETS} developed and built by \gls{VSE} with two hydraulically steerable axles. It was originally meant to be used in trailer steering as an after-market system and thus does not tie in with any of the truck's communication networks or sensor data. This makes it OEM-independent and very robust. The \gls{ETS} solely relies on the articulation angle between the leading and following unit and the speed of the combination. The articulation angle is gathered via a dedicated sensor mounted on the king-pin of the respective unit, the speed-signal is gathered from the ISO-11992 \gls{CAN}. 
 
+The axles permit a maximum steering-angle of +-24$^\circ$ for both axles. 
 \subsection{Rapid-prototyping system (\gls{MABII})}
 
 To execute the readily developed algorithms\cite{c27}, that govern the steering of the \gls{HCT}-combination, they needed to be ported to a platform, capable of interacting with the dolly and the tractor, while ensuring robust behavior during run-time. It was decided to incorporate the \gls{MABII} by dSpace, a real-time platform for its advantages in automotive environments with a vast selection of in- and outputs for interfacing with vehicular communications systems (\gls{CAN}, ethernet, FlexLink). It conveniently ties in with Simulink, which was used for algorithm development, for code-generation. Furthermore it physically is very robust and has good logging possibilities.

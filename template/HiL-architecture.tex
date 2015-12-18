@@ -17,4 +17,7 @@ In accordance with the process of the V-model it was deemed necessary and safest
 	
 	\label{fig:HIL_overview}
 \end{figure*}
+
+\subsection{Modification to base system}
+The sensors described in \ref{sec:basevehicle} were discarded and replaced by an artificial signal emulating the original message structure. By using the inverse  function of the original mapping of articulation angle to steering angle, it was possible to command the desired steering angle. The base system has one \gls{CAN} for both axles, resulting in one common steering angle for the both of them. By splitting this \gls{CAN} into two separate networks, it now is possible to actuate the axles independently. 
 \end{document}
