@@ -3,14 +3,14 @@
 \begin{document}
 	
 	{\pagestyle{empty}}
-	\section{Delays and characteristics}
+	\section{Characteristics}
 	\label{chap:Delays}
 	
 	Three characteristics mainly influence the behaviour of the system: 
 	
 	\begin{enumerate}
-		\item Around the middle-position the steering does not react towards small changes, the legacy system has a dead-band of $+-$2 degree. For the original application this is useful to ensure a straight path of the vehicle. For this experimental platform however consistent control over the complete range is desirable, also enabling small articulations of the axles which is especially called for at higher speeds. 
-		\item If a constant steering-angle is requested over a certain period, the hydraulic system will slowly fall back to the middle position. This needs to be eliminated because turning maneuvers or shunting-situations often require maximum articulation for longer timespan.
+		\item Around the middle-position the steering does not react towards small changes, the legacy system has a dead-band of +-2 degree. For the original application this is useful to ensure a straight path of the vehicle. For this experimental platform however consistent control over the complete range is desirable, also enabling small articulations of the axles which is especially called for at higher speeds. 
+		\item If a constant steering-angle is requested over a certain period, the hydraulic system will slowly fall back to the middle position. This needs to be eliminated because turning maneuvers or shunting-situations often require maximum articulation for longer timespan. Figure \ref{fig:Constant_request} shows this decline, for constant angles.
 		\item The steering system has a response time, composed of the normal inertias of the hydraulic system and an additional delay introduced by filtering and noise-canceling in the legacy system. 
 		
 	\end{enumerate}
@@ -18,7 +18,7 @@
 	\begin{figure}[!h]
 		
 		\includegraphics[width=1\linewidth]{front}
-		\caption[Requested Angle and Actual Angle]{Requested Angle and Actual Angle}
+		\caption[Decline of steering angles for constant requests]{Decline of steering angles for constant requests}
 		
 		\label{fig:Constant_request}
 	\end{figure}
