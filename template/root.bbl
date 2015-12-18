@@ -1,0 +1,126 @@
+% $ biblatex auxiliary file $
+% $ biblatex version 2.5 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\entry{islam2015improve}{inproceedings}{}
+  \name{author}{3}{}{%
+    {{}%
+     {Islam}{I.}%
+     {Mohammad~Manjurul}{M.~M.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Laine}{L.}%
+     {Leo}{L.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Jacobson}{J.}%
+     {Bengt}{B.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{organization}{1}{%
+    {IEEE}%
+  }
+  \strng{namehash}{IMMLLJB1}
+  \strng{fullhash}{IMMLLJB1}
+  \field{booktitle}{Intelligent Transportation Systems (ITSC), 2015 IEEE 18th
+  International Conference on}
+  \field{pages}{2370\bibrangedash 2377}
+  \field{title}{Improve Safety by Optimal Steering Control of a Converter Dolly
+  using Particle Swarm Optimization for Low-Speed Maneuvers}
+  \field{year}{2015}
+\endentry
+
+\entry{islam2015inverse}{inproceedings}{}
+  \name{author}{3}{}{%
+    {{}%
+     {Islam}{I.}%
+     {Mohammad~Manjurul}{M.~M.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Laine}{L.}%
+     {Leo}{L.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Jacobson}{J.}%
+     {Bengt}{B.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{organization}{1}{%
+    {IEEE}%
+  }
+  \strng{namehash}{IMMLLJB1}
+  \strng{fullhash}{IMMLLJB1}
+  \field{booktitle}{Intelligent Vehicles Symposium (IV), 2015 IEEE}
+  \field{pages}{1024\bibrangedash 1031}
+  \field{title}{Inverse model control including actuator dynamics for active
+  dolly steering in high capacity transport vehicle}
+  \field{year}{2015}
+\endentry
+
+\entry{automotive_software_engineering}{book}{}
+  \name{author}{2}{}{%
+    {{}%
+     {Sch{\"a}uffele}{S.}%
+     {J{\"o}rg}{J.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Zurawka}{Z.}%
+     {Thomas}{T.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Springer-Verlag}%
+  }
+  \strng{namehash}{SJZT1}
+  \strng{fullhash}{SJZT1}
+  \field{title}{Automotive software engineering: Grundlagen, Prozesse, Methoden
+  und Werkzeuge effizient einsetzen}
+  \field{year}{2012}
+\endentry
+
+\entry{franzreal}{article}{}
+  \name{author}{2}{}{%
+    {{}%
+     {FRANZ}{F.}%
+     {SEBASTIAN}{S.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {HOFMANN}{H.}%
+     {MICHAEL}{M.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{FSHM1}
+  \strng{fullhash}{FSHM1}
+  \field{title}{Real-Time Control Interface for a Steered and Braked Converter
+  Dolly for High Capacity Transport Vehicles}
+  \field{year}{2015}
+\endentry
+
+\lossort
+\endlossort
+
+\endinput

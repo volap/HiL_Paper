@@ -22,17 +22,23 @@
 		
 		\label{fig:Constant_request}
 	\end{figure}
-	
+	\begin{figure}[!h]
+		
+		\includegraphics[width=1\linewidth]{Step_input_request}
+		\caption[Delay between requested and actual angle]{Delay between requested angle and actual angle}
+		
+		\label{fig:Step_input_request}
+	\end{figure}
 	
 	Measures to address these issues were:
 	
 	\begin{enumerate}
 		\item A \gls{PWM} around the zero-articulation position reaching out of the dead-band was implemented for requested angles lying within this range. 
 		
-		\item If a constant angle is requested over a period of time, long enough to result in the described decline of the articulation, a \gls{PWM} around this value will be initiated. 
+		\item If a constant angle is requested over a period of time, long enough to result in the described decline of the articulation, a \gls{PWM} around this value will be initiated (See figure \ref{fig:Constant_request}). 
 		
 		\item Exactly determining the delay period made it possible to include it in the calculations for initial testing, where a feedback-loop was not present and the speed was still sufficiently low. A value of 0.26s for the front axle's reaction time and 0.30s for the back axle's respectively are too high for higher speeds.\\
-		A \gls{PWM} around the desired request value was implemented in order to keep the hydraulic system active and thus eliminating some of the inertia. 
+		A \gls{PWM} around the desired request value was implemented in order to keep the hydraulic system active and thus eliminating some of the inertia (See figure \ref{fig:Step_input_request}). 
 	\end{enumerate}
 	
 	
