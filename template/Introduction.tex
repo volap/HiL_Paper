@@ -5,10 +5,11 @@
 {\pagestyle{empty}}
 \section{Introduction}
 \label{chap:introduction}
+\glsresetall
 The driving behaviour of \glspl{LCV} is in many ways different to that of single unit trucks and needs to be researched in great detail to gain an understanding of the vehicle's dynamic properties, that is equally detailed as it is for other vehicle classes. This will lead to development of better safety and assistance systems and thus reduce threat potential, accidents and fatalities involving this emerging mode of transportation.\cite{performance_improvement}
 
 The research project in which this work is embedded aims to develop an active dolly\cite{islam2015inverse, islam2015improve}, meaning that steering of two axles in a \gls{LCV} will be autonomously conducted based on the driving situation at hand and various vehicle parameters (e.g. speed, steering wheel angle). 
-This control algorithm is a result of previous works and shall now be executed on a rapid-prototyping system which is linked to and controls two axles. To supply this connection between the hardware and control-algorithm implemented in the modeling-environment Simulink is the main-contribution of this work. This leads to lateral control over all units on vehicle level in a \gls{LCV}. The platform developed in this work can be used to add steering for any two axles in a \gls{LCV}.
+This control algorithm is a result of previous works and shall now be executed on a rapid-prototyping system which controls two axles. To supply this connection between the hardware and control-algorithm implemented in the modeling-environment Simulink is the main-contribution of this work. This leads to lateral control over all units on vehicle level in a \gls{LCV}. The platform developed in this work can be used to add steering for any two axles in a \gls{LCV}.
 
 
 
@@ -16,9 +17,9 @@ The following points will be covered in this paper:
 \begin{itemize}
 	\item outline of the development process of the experimental platform and presentation of the utilized hard- and software systems 
 	\item evaluation of existing hardware characteristics and delays and implemented measures to eliminate them
-	\item discussion of a standard driving maneuver of a combination executed on the  developed \glsreset{HIL}\gls{HIL}-system 
+	\item discussion of a standard driving maneuver of a combination executed on the  developed \gls{HIL}-system 
 	\item a comparison between these \gls{HIL}-maneuver and simulation results, which proofs the validity of the platform
-	\item present an outlook over future works
+	
 \end{itemize}
 
 The limitations of for this work are: 
@@ -26,7 +27,7 @@ The limitations of for this work are:
 \begin{itemize}
 	\item \gls{HIL}-applications of the system are covered only
 	\item low-speed maneuvers are only to be considered
-	\item all measurements in this work were undertaken with the system being suspended to eliminate friction
+	\item all measurements in this work were undertaken with the axles being raised to eliminate friction
 \end{itemize}
 
 \end{document}

@@ -3,3 +3,6 @@ The style file: biblatex.bst
 Database file #1: root-blx.bib
 Database file #2: ExampleBib.bib
 Biblatex version: 3.0
+Name 1 in "Institutionen f{\"o}r till{\"a}mpad mekanik, Fordonsteknik och autonoma system, Chalmers tekniska h{\"o}gskola," has a comma at the end for entry nilsson2015traffic
+while executing---line 2659 of file biblatex.bst
+(There was 1 error message)

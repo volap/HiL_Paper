@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.12.17)  18 DEC 2015 10:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.12.17)  28 DEC 2015 15:33
 entering extended mode
 **./root.tex
 (root.tex
@@ -1247,6 +1247,16 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip75
 )
+("C:\Users\sebas\AppData\Local\Programs\MiKTeX 2.9\tex\latex\units\units.sty"
+Package: units 1998/08/04 v0.9b Typesetting units
+
+("C:\Users\sebas\AppData\Local\Programs\MiKTeX 2.9\tex\latex\units\nicefrac.sty
+"
+Package: nicefrac 1998/08/04 v0.9b Nice fractions
+\L@UnitsRaiseDisplaystyle=\skip76
+\L@UnitsRaiseTextstyle=\skip77
+\L@UnitsRaiseScriptstyle=\skip78
+))
 ("C:\Users\sebas\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\bookmark.
 sty"
 Package: bookmark 2011/12/02 v1.24 PDF bookmarks (HO)
@@ -1328,15 +1338,15 @@ File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 \blx@notetype=\count312
 \blx@parenlevel@text=\count313
 \blx@parenlevel@foot=\count314
-\labelnumberwidth=\skip76
-\labelalphawidth=\skip77
-\shorthandwidth=\skip78
-\biblabelsep=\skip79
-\bibitemsep=\skip80
-\bibnamesep=\skip81
-\bibinitsep=\skip82
-\bibparsep=\skip83
-\bibhang=\skip84
+\labelnumberwidth=\skip79
+\labelalphawidth=\skip80
+\shorthandwidth=\skip81
+\biblabelsep=\skip82
+\bibitemsep=\skip83
+\bibnamesep=\skip84
+\bibinitsep=\skip85
+\bibparsep=\skip86
+\bibhang=\skip87
 \blx@auxin=\read4
 \blx@auxout=\write4
 \c@mincomprange=\count315
@@ -1473,11 +1483,11 @@ File: biblatex.cfg
 \glo@main@file=\write6
 \openout6 = `root.glo'.
 
-Package glossaries Info: Writing glossary file root.glo on input line 40.
+Package glossaries Info: Writing glossary file root.glo on input line 41.
 \glo@acronym@file=\write7
 \openout7 = `root.acn'.
 
-Package glossaries Info: Writing glossary file root.acn on input line 40.
+Package glossaries Info: Writing glossary file root.acn on input line 41.
 
 ("C:\Users\sebas\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\frontendlaye
 r\tikz\libraries\tikzlibraryarrows.code.tex"
@@ -1513,20 +1523,20 @@ File: english.lbx 2015/10/21 v3.1 biblatex localization (PK/JW/AB)
 ) (root.aux)
 \openout1 = `root.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
 
 ("C:\Users\sebas\AppData\Local\Programs\MiKTeX 2.9\tex\context\base\supp-pdf.mk
 ii"
@@ -1553,7 +1563,7 @@ breviations.cfg"
 File: siunitx-abbreviations.cfg 2015/10/15 v2.6m siunitx: Abbreviated units
 ) ABD: EveryShipout initializing macros
 \AtBeginShipoutBox=\box68
-Package hyperref Info: Link coloring OFF on input line 63.
+Package hyperref Info: Link coloring OFF on input line 64.
 
 ("C:\Users\sebas\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperref\nameref.s
 ty"
@@ -1565,9 +1575,9 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count399
 )
-LaTeX Info: Redefining \ref on input line 63.
-LaTeX Info: Redefining \pageref on input line 63.
-LaTeX Info: Redefining \nameref on input line 63.
+LaTeX Info: Redefining \ref on input line 64.
+LaTeX Info: Redefining \pageref on input line 64.
+LaTeX Info: Redefining \nameref on input line 64.
 Package biblatex Info: No input encoding detected.
 (biblatex)             Assuming 'ascii'.
 Package biblatex Info: Automatic encoding selection.
@@ -1577,31 +1587,31 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'root.bbl' found.
  (root.bbl)
-Package biblatex Info: Reference section=0 on input line 63.
-Package biblatex Info: Reference segment=0 on input line 63.
+Package biblatex Info: Reference section=0 on input line 64.
+Package biblatex Info: Reference segment=0 on input line 64.
 \c__siunitx_mathsf_int=\count400
-LaTeX Font Info:    Try loading font information for OT1+ztmcm on input line 63
+LaTeX Font Info:    Try loading font information for OT1+ztmcm on input line 64
 .
 
 ("C:\Users\sebas\AppData\Local\Programs\MiKTeX 2.9\tex\latex\psnfss\ot1ztmcm.fd
 "
 File: ot1ztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ztmcm.
 )
-LaTeX Font Info:    Try loading font information for OML+ztmcm on input line 63
+LaTeX Font Info:    Try loading font information for OML+ztmcm on input line 64
 .
 
 ("C:\Users\sebas\AppData\Local\Programs\MiKTeX 2.9\tex\latex\psnfss\omlztmcm.fd
 "
 File: omlztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ztmcm.
 )
-LaTeX Font Info:    Try loading font information for OMS+ztmcm on input line 63
+LaTeX Font Info:    Try loading font information for OMS+ztmcm on input line 64
 .
 
 ("C:\Users\sebas\AppData\Local\Programs\MiKTeX 2.9\tex\latex\psnfss\omsztmcm.fd
 "
 File: omsztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/ztmcm.
 )
-LaTeX Font Info:    Try loading font information for OMX+ztmcm on input line 63
+LaTeX Font Info:    Try loading font information for OMX+ztmcm on input line 64
 .
 
 ("C:\Users\sebas\AppData\Local\Programs\MiKTeX 2.9\tex\latex\psnfss\omxztmcm.fd
@@ -1609,41 +1619,35 @@ LaTeX Font Info:    Try loading font information for OMX+ztmcm on input line 63
 File: omxztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/ztmcm.
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 63.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 64.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 63.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 64.
 \c__siunitx_mathtt_int=\count401
-LaTeX Font Info:    Calculating math sizes for size <11> on input line 68.
+LaTeX Font Info:    Calculating math sizes for size <11> on input line 69.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8.14006> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 68.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 69.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6.60007> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 68.
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 68.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 69.
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 69.
  ("C:\Users\sebas\AppData\Local\Programs\MiKTeX 2.9\tex\latex\psnfss\ot1pcr.fd"
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
-Underfull \hbox (badness 10000) in paragraph at lines 68--68
+Underfull \hbox (badness 10000) in paragraph at lines 69--69
 \OT1/ptm/m/n/8 Swe-den, \OT1/pcr/m/n/9 michael.hofmann@alumni.chalmers.se\OT1/p
 tm/m/n/8 ,
  []
 
-(Introduction.tex) (Hardware-setup.tex) (Software-setup.tex [1{C:/Users/sebas/A
-ppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
+(Introduction.tex) (Hardware-setup.tex [1{C:/Users/sebas/AppData/Local/MiKTeX/2
+.9/pdftex/config/pdftex.map}
 
 \openout5 = `root.ist'.
 
 
-]
+]) (Software-setup.tex) (HiL-architecture.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\gls' on input line 10.
+(hyperref)                removing `\gls' on input line 6.
 
-
-Underfull \hbox (badness 1701) in paragraph at lines 12--13
-[]\OT1/ptm/m/n/10 To eval-u-ate the dy-namic per-for-mance of the []HCT-
- []
-
-) (HiL-architecture.tex
 Package epstopdf Info: Source file: <HIL_overview.eps>
 (epstopdf)                    date: 2015-12-17 10:25:33
 (epstopdf)                    size: 106804 bytes
@@ -1652,20 +1656,15 @@ Package epstopdf Info: Source file: <HIL_overview.eps>
 (epstopdf)                    size: 25838 bytes
 (epstopdf)             Command: <epstopdf --outfile=HIL_overview-eps-converted-
 to.pdf HIL_overview.eps>
-(epstopdf)             \includegraphics on input line 15.
+(epstopdf)             \includegraphics on input line 16.
 Package epstopdf Info: Output file is already uptodate.
-
-<HIL_overview-eps-converted-to.pdf, id=29, 963.6pt x 542.025pt>
+<HIL_overview-eps-converted-to.pdf, id=37, 963.6pt x 542.025pt>
 File: HIL_overview-eps-converted-to.pdf Graphic file (type pdf)
 
 <use HIL_overview-eps-converted-to.pdf>
 Package pdftex.def Info: HIL_overview-eps-converted-to.pdf used on input line 1
-5.
-(pdftex.def)             Requested size: 404.71353pt x 227.64894pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
+6.
+(pdftex.def)             Requested size: 455.2979pt x 256.09988pt.
 ) (Delays.tex
 Package epstopdf Info: Source file: <front.eps>
 (epstopdf)                    date: 2015-12-17 13:17:35
@@ -1675,13 +1674,14 @@ Package epstopdf Info: Source file: <front.eps>
 (epstopdf)                    size: 15871 bytes
 (epstopdf)             Command: <epstopdf --outfile=front-eps-converted-to.pdf 
 front.eps>
-(epstopdf)             \includegraphics on input line 20.
+(epstopdf)             \includegraphics on input line 13.
 Package epstopdf Info: Output file is already uptodate.
- <front-eps-converted-to.pdf, id=32, 460.72125pt x 270.00874pt>
+
+<front-eps-converted-to.pdf, id=41, 460.72125pt x 270.00874pt>
 File: front-eps-converted-to.pdf Graphic file (type pdf)
 
 <use front-eps-converted-to.pdf>
-Package pdftex.def Info: front-eps-converted-to.pdf used on input line 20.
+Package pdftex.def Info: front-eps-converted-to.pdf used on input line 13.
 (pdftex.def)             Requested size: 245.71811pt x 144.0021pt.
 
 
@@ -1695,20 +1695,61 @@ Package epstopdf Info: Source file: <Step_input_request.eps>
 (epstopdf)                    size: 10479 bytes
 (epstopdf)             Command: <epstopdf --outfile=Step_input_request-eps-conv
 erted-to.pdf Step_input_request.eps>
-(epstopdf)             \includegraphics on input line 27.
+(epstopdf)             \includegraphics on input line 21.
 Package epstopdf Info: Output file is already uptodate.
-<Step_input_request-eps-converted-to.pdf, id=33, 469.755pt x 269.005pt>
+<Step_input_request-eps-converted-to.pdf, id=42, 469.755pt x 269.005pt>
 File: Step_input_request-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Step_input_request-eps-converted-to.pdf>
 Package pdftex.def Info: Step_input_request-eps-converted-to.pdf used on input 
-line 27.
+line 21.
 (pdftex.def)             Requested size: 245.71811pt x 140.70844pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[2]) (Showcase_Maneuver.tex
+Package epstopdf Info: Source file: <Request_with_pulse.eps>
+(epstopdf)                    date: 2015-12-28 11:38:12
+(epstopdf)                    size: 256645 bytes
+(epstopdf)             Output file: <Request_with_pulse-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-12-28 15:13:13
+(epstopdf)                    size: 13033 bytes
+(epstopdf)             Command: <epstopdf --outfile=Request_with_pulse-eps-conv
+erted-to.pdf Request_with_pulse.eps>
+(epstopdf)             \includegraphics on input line 40.
+Package epstopdf Info: Output file is already uptodate.
+<Request_with_pulse-eps-converted-to.pdf, id=45, 460.72125pt x 270.00874pt>
+File: Request_with_pulse-eps-converted-to.pdf Graphic file (type pdf)
+
+<use Request_with_pulse-eps-converted-to.pdf>
+Package pdftex.def Info: Request_with_pulse-eps-converted-to.pdf used on input 
+line 40.
+(pdftex.def)             Requested size: 245.71811pt x 144.0021pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+Package epstopdf Info: Source file: <Deadband.eps>
+(epstopdf)                    date: 2015-12-28 13:58:46
+(epstopdf)                    size: 207310 bytes
+(epstopdf)             Output file: <Deadband-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-12-28 15:13:10
+(epstopdf)                    size: 9240 bytes
+(epstopdf)             Command: <epstopdf --outfile=Deadband-eps-converted-to.p
+df Deadband.eps>
+(epstopdf)             \includegraphics on input line 55.
+Package epstopdf Info: Output file is already uptodate.
+<Deadband-eps-converted-to.pdf, id=47, 352.31625pt x 251.94125pt>
+File: Deadband-eps-converted-to.pdf Graphic file (type pdf)
+
+<use Deadband-eps-converted-to.pdf>
+Package pdftex.def Info: Deadband-eps-converted-to.pdf used on input line 55.
+(pdftex.def)             Requested size: 245.71811pt x 175.71182pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+) (Showcase_Maneuver.tex
 Package epstopdf Info: Source file: <xy_HIL_and_VTM.eps>
 (epstopdf)                    date: 2015-12-17 12:54:13
 (epstopdf)                    size: 450318 bytes
@@ -1720,7 +1761,7 @@ d-to.pdf xy_HIL_and_VTM.eps>
 (epstopdf)             \includegraphics on input line 12.
 Package epstopdf Info: Output file is already uptodate.
 
-<xy_HIL_and_VTM-eps-converted-to.pdf, id=55, 354.32375pt x 283.0575pt>
+<xy_HIL_and_VTM-eps-converted-to.pdf, id=51, 354.32375pt x 283.0575pt>
 File: xy_HIL_and_VTM-eps-converted-to.pdf Graphic file (type pdf)
 
 <use xy_HIL_and_VTM-eps-converted-to.pdf>
@@ -1731,13 +1772,13 @@ Package pdftex.def Info: xy_HIL_and_VTM-eps-converted-to.pdf used on input line
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[3 <./HIL_overview-eps-converted-to.pdf> <./front-eps-converted-to.pdf> <./Step
-_input_request-eps-converted-to.pdf>]) (Conclusion.tex) (Related_works.tex)
-(Acknowledgement.tex)
-Underfull \hbox (badness 1817) in paragraph at lines 123--123
-\OT1/ptm/m/it/10 en-gi-neer-ing: Grund-la-gen, Prozesse, Meth-o-den und
- []
+[2]
+Underfull \vbox (badness 1048) has occurred while \output is active []
 
+)
+(Conclusion.tex [3 <./HIL_overview-eps-converted-to.pdf> <./front-eps-converted
+-to.pdf> <./Step_input_request-eps-converted-to.pdf> <./Request_with_pulse-eps-
+converted-to.pdf>]) (Related_works.tex) (Acknowledgement.tex)
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -1754,36 +1795,36 @@ Package glossaries Warning: No \printglossary or \printglossaries found.
 (Remove \makeglossaries if you don't want any glossaries.)
 This document will not have a glossary.
 
-[4 <./xy_HIL_and_VTM-eps-converted-to.pdf>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 124.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 124.
- (root.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 124.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 124.
+[4 <./Deadband-eps-converted-to.pdf> <./xy_HIL_and_VTM-eps-converted-to.pdf>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 110.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 110.
+
+(root.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 110.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 110.
 Package logreq Info: Writing requests to 'root.run.xml'.
 \openout1 = `root.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 37391 strings out of 493634
- 725397 string characters out of 3135238
- 1032752 words of memory out of 3000000
- 40168 multiletter control sequences out of 15000+200000
- 63713 words of font info for 146 fonts, out of 3000000 for 9000
+ 37481 strings out of 493634
+ 727243 string characters out of 3135238
+ 1035863 words of memory out of 3000000
+ 40244 multiletter control sequences out of 15000+200000
+ 63529 words of font info for 146 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 55i,10n,60p,10378b,1400s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 55i,10n,60p,10378b,1430s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/sebas/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/fontname/8r
 .enc}<C:/Users/sebas/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfo
-nts/cm/cmmi10.pfb><C:/Users/sebas/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
-/public/amsfonts/cm/cmsy10.pfb><C:/Users/sebas/AppData/Local/Programs/MiKTeX 2.
-9/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/sebas/AppData/Local/Programs/MiK
-TeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Users/sebas/AppData/Local/Programs
-/MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/sebas/AppData/Local/Pro
-grams/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Users/sebas/AppData/Local
-/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on root.pdf (4 pages, 229395 bytes).
+nts/cm/cmsy10.pfb><C:/Users/sebas/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
+/urw/courier/ucrr8a.pfb><C:/Users/sebas/AppData/Local/Programs/MiKTeX 2.9/fonts
+/type1/urw/times/utmb8a.pfb><C:/Users/sebas/AppData/Local/Programs/MiKTeX 2.9/f
+onts/type1/urw/times/utmbi8a.pfb><C:/Users/sebas/AppData/Local/Programs/MiKTeX 
+2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Users/sebas/AppData/Local/Programs/MiK
+TeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
+Output written on root.pdf (4 pages, 248038 bytes).
 PDF statistics:
- 209 PDF objects out of 1000 (max. 8388607)
- 36 named destinations out of 1000 (max. 500000)
- 161 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 241 PDF objects out of 1000 (max. 8388607)
+ 42 named destinations out of 1000 (max. 500000)
+ 131 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -16,11 +16,16 @@
   {}
 \endgroup
 
-\entry{islam2015improve}{inproceedings}{}
-  \name{author}{3}{}{%
+\entry{performance_improvement}{inproceedings}{}
+  \name{author}{4}{}{%
     {{}%
-     {Islam}{I.}%
-     {Mohammad~Manjurul}{M.~M.}%
+     {Kati}{K.}%
+     {Maliheh~Sadeghi}{M.~S.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Fredriksson}{F.}%
+     {Jonas}{J.}%
      {}{}%
      {}{}}%
     {{}%
@@ -34,17 +39,13 @@
      {}{}%
      {}{}}%
   }
-  \list{organization}{1}{%
-    {IEEE}%
-  }
-  \strng{namehash}{IMMLLJB1}
-  \strng{fullhash}{IMMLLJB1}
-  \field{booktitle}{Intelligent Transportation Systems (ITSC), 2015 IEEE 18th
-  International Conference on}
-  \field{pages}{2370\bibrangedash 2377}
-  \field{title}{Improve Safety by Optimal Steering Control of a Converter Dolly
-  using Particle Swarm Optimization for Low-Speed Maneuvers}
-  \field{year}{2015}
+  \strng{namehash}{KMS+1}
+  \strng{fullhash}{KMSFJLLJB1}
+  \field{booktitle}{13th International Heavy Vehicle Transport Technology
+  Symposium, San Luis, Argentina}
+  \field{title}{Performance Improvement for A-double Combination by introducing
+  a Smart Dolly}
+  \field{year}{2014}
 \endentry
 
 \entry{islam2015inverse}{inproceedings}{}
@@ -77,6 +78,68 @@
   \field{year}{2015}
 \endentry
 
+\entry{islam2015improve}{inproceedings}{}
+  \name{author}{3}{}{%
+    {{}%
+     {Islam}{I.}%
+     {Mohammad~Manjurul}{M.~M.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Laine}{L.}%
+     {Leo}{L.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Jacobson}{J.}%
+     {Bengt}{B.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{organization}{1}{%
+    {IEEE}%
+  }
+  \strng{namehash}{IMMLLJB1}
+  \strng{fullhash}{IMMLLJB1}
+  \field{booktitle}{Intelligent Transportation Systems (ITSC), 2015 IEEE 18th
+  International Conference on}
+  \field{pages}{2370\bibrangedash 2377}
+  \field{title}{Improve Safety by Optimal Steering Control of a Converter Dolly
+  using Particle Swarm Optimization for Low-Speed Maneuvers}
+  \field{year}{2015}
+\endentry
+
+\entry{paratorAB}{online}{}
+  \verb{url}
+  \verb http://www.parator.com/
+  \endverb
+\endentry
+
+\entry{vse}{online}{}
+  \verb{url}
+  \verb https://www.v-s-e.com
+  \endverb
+\endentry
+
+\entry{mabii}{online}{}
+  \verb{url}
+  \verb https://www.dspace.com/en/pub/home/products/hw/micautob.cfm
+  \endverb
+\endentry
+
+\entry{dspace}{online}{}
+  \verb{url}
+  \verb https://www.dspace.com/
+  \endverb
+\endentry
+
+\entry{volvogtt}{online}{}
+  \verb{url}
+  \verb http://www.volvogroup.com/group/global/en-gb/volvo%20group/our%20compan
+  \verb ies/GTtechnology/Pages/GTT2.aspx
+  \endverb
+\endentry
+
 \entry{automotive_software_engineering}{book}{}
   \name{author}{2}{}{%
     {{}%
@@ -100,6 +163,27 @@
   \field{year}{2012}
 \endentry
 
+\entry{nilsson2015traffic}{book}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Nilsson}{N.}%
+     {Peter}{P.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Institutionen f{\"o}r till{\"a}mpad mekanik, Fordonsteknik och autonoma
+  system, Chalmers tekniska h{\"o}gskola,}%
+  }
+  \strng{namehash}{NP1}
+  \strng{fullhash}{NP1}
+  \field{series}{Technical report - Department of Applied Mechanics, Chalmers
+  University of Technology, G{\"o}teborg, Sweden}
+  \field{title}{On Traffic Situation Predictions for Automated Driving of Long
+  Vehicle Combinations}
+  \field{year}{2015}
+\endentry
+
 \entry{franzreal}{article}{}
   \name{author}{2}{}{%
     {{}%
@@ -118,6 +202,18 @@
   \field{title}{Real-Time Control Interface for a Steered and Braked Converter
   Dolly for High Capacity Transport Vehicles}
   \field{year}{2015}
+\endentry
+
+\entry{safer}{online}{}
+  \verb{url}
+  \verb http://www.chalmers.se/safer
+  \endverb
+\endentry
+
+\entry{vinnova}{online}{}
+  \verb{url}
+  \verb http://www.vinnova.se/en/
+  \endverb
 \endentry
 
 \lossort
