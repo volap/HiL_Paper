@@ -3,7 +3,7 @@
 \begin{document}
 
 {\pagestyle{empty}}
-\section{System Architecture}
+\section{\gls{HIL} verification setup}
 \label{chap:HiL-Architecture}
 
 
@@ -21,7 +21,7 @@ The \gls{VTM} library includes a lot of processing-intensive sub-models (tire mo
 	\label{fig:HIL_overview}
 \end{figure*}
 
- Figure \ref{fig:HIL_overview} illustrates the distribution of the \gls{HIL}-setup's different components according to the Volvo Group Technology functionality model\cite{nilsson2015traffic} over two computers, the \gls{MABII} and the actual hardware (axles, hydraulic control system). The \gls{VMM} consists of the controller previously developed which is executed on the simulation PC and the steering interface executed on the \gls{MABII}. For track-testing it of course is necessary to also port the controller for execution on the \gls{MABII} to have one closed of system. This was not yet possible to achieve for the tests at hand, as some components used within the controller algorithm's  Simulink structure were incompatible for real-time execution on the dSPACE system.
+ Figure \ref{fig:HIL_overview} illustrates the distribution of the \gls{HIL}-setup's different components according to the Volvo Group Technology functionality model\cite{nilsson2015traffic} over two computers, the \gls{MABII} and the actual hardware (axles, hydraulic control system). The \gls{VMM} consists of the controller previously developed which is executed on the simulation PC and the steering interface executed on the \gls{MABII}. For track-testing it of course is necessary to also port the controller for execution on the \gls{MABII} to have one closed off system. %This was not yet possible to achieve for the tests at hand, as some components used within the controller algorithm's  Simulink structure were incompatible for real-time execution on the dSPACE system.
 
 
 \subsection{Modification to base system}

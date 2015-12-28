@@ -9,7 +9,7 @@
 	Three characteristics mainly influence the behaviour of the system: 
 	
 	\begin{enumerate}
-		\item If a constant steering-angle is requested over a certain period, the hydraulic system will slowly fall back to the middle position. This needs to be eliminated because turning maneuvers or shunting-situations often require maximum articulation for longer timespan. Figure \ref{fig:Constant_request} shows this decline, for constant angles.
+		\item If a constant steering-angle is requested over a certain period, the hydraulic system will slowly fall back to the middle position. This needs to be eliminated because turning maneuvers or shunting situations often require maximum articulation for longer timespan. Figure \ref{fig:Constant_request} shows this decline, for constant angles.
 		
 		\begin{figure}[!h]
 			
@@ -19,7 +19,7 @@
 			\label{fig:Constant_request}
 		\end{figure}
 		
-		\item Around the middle-position the steering does not react towards small changes. The legacy system has a dead-band of +/-2 degrees. For the original application this is useful to ensure a straight path of the vehicle. For this experimental platform however consistent control over the complete range is desirable. This is to also enable small articulations of the axles which is especially called for at higher speeds, where steering angles are a lot smaller. 
+		\item Around the middle-position the steering does not react towards small changes. The legacy system has a dead band for articulations between +/-2 degrees. For the original application this is useful to ensure a straight path of the vehicle. For this experimental platform however consistent control over the complete range is desirable. This is to also enable small articulations of the axles which is especially called for at higher speeds, where steering angles are a lot smaller. 
 		
 		\item The steering system has a response time, composed of the normal inertias of the hydraulic system and an additional delay introduced by filtering and noise-canceling in the legacy system. This delays can be gathered from figure \ref{fig:Step_input_request}.
 		
@@ -33,18 +33,24 @@
 		
 	\end{enumerate}
 	
-	s
-	
 	
 	Measures to address these issues were:
 	
 	\begin{enumerate}
 		\item A \gls{PWM} around the zero-articulation position reaching out of the dead-band was implemented for requested angles lying within this range. 
 		
-		\item If a constant angle is requested over a period of time, long enough to result in the described decline of the articulation, a \gls{PWM} around this value will be initiated. 
+		\item To avoid the decline for constant requests, a periodic rectangular function with a small amplitude was added to the requested value and then fed forward to the \gls{ECU}. This is shown in figure \ref{fig:Request_with_pulse}. 
+		
+		\begin{figure}[h!]
+
+\includegraphics[width=1\linewidth]{Request_with_pulse}
+\caption[Adding a pulsating function to the original request to feed forward to the ECU]{Adding a pulsating function to the original request to feed forward to the ECU}
+\label{fig:Request_with_pulse}
+\end{figure}
+
 		
 		\item Exactly determining the delay period made it possible to account for it in the calculations for initial testing, where a feedback-loop was not present and the speed was still sufficiently low. A value of 0.26\unit{s} for the front axle's reaction time and 0.30\unit{s} for the back axle's respectively are too high for higher speeds.\\
-		A \gls{PWM} around the desired request value was implemented in order to keep the hydraulic system active and thus eliminating some of the inertia. 
+		The introduced noise shown in figure \ref{fig:Request_with_pulse} around the desired request value was implemented in order to keep the hydraulic system active and thus eliminating some of the inertia. 
 	\end{enumerate}
 	
 	
