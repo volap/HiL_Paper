@@ -1,5 +1,5 @@
 % $ biblatex auxiliary file $
-% $ biblatex version 2.5 $
+% $ biblatex version 2.4 $
 % Do not modify the above lines!
 %
 % This is an auxiliary file used by the 'biblatex' package.
@@ -133,11 +133,10 @@
   \endverb
 \endentry
 
-\entry{volvogtt}{online}{}
-  \verb{url}
-  \verb http://www.volvogroup.com/group/global/en-gb/volvo%20group/our%20compan
-  \verb ies/GTtechnology/Pages/GTT2.aspx
-  \endverb
+\entry{vtm_source}{reference}{}
+  \field{title}{Virtual Truck Model, Simulink library developed at Volvo Group
+  Trucks Technology, Department BF72991}
+  \field{year}{2014}
 \endentry
 
 \entry{automotive_software_engineering}{book}{}

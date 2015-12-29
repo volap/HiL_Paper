@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.5.26)  29 DEC 2015 13:54
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.5.26)  29 DEC 2015 14:22
 entering extended mode
 **root.tex
 (C:\Users\1.5V\Desktop\HiL_Paper\template\root.tex
@@ -1500,11 +1500,8 @@ Package biblatex Info: No input encoding detected.
 Package biblatex Info: Automatic encoding selection.
 (biblatex)             Assuming data encoding 'ascii'.
 Package biblatex Info: Trying to load bibliographic data...
-
-
-Package biblatex Warning: File 'root.bbl' created by wrong version.
-
 Package biblatex Info: ... file 'root.bbl' found.
+
 (C:\Users\1.5V\Desktop\HiL_Paper\template\root.bbl)
 Package biblatex Info: Reference section=0 on input line 68.
 Package biblatex Info: Reference segment=0 on input line 68.
@@ -1591,7 +1588,7 @@ Package epstopdf Info: Source file: <HIL_overview.eps>
 to.pdf HIL_overview.eps>
 (epstopdf)             \includegraphics on input line 16.
 Package epstopdf Info: Output file is already uptodate.
-<HIL_overview-eps-converted-to.pdf, id=36, 963.6pt x 542.025pt>
+<HIL_overview-eps-converted-to.pdf, id=37, 963.6pt x 542.025pt>
 File: HIL_overview-eps-converted-to.pdf Graphic file (type pdf)
 
 <use HIL_overview-eps-converted-to.pdf>
@@ -1611,7 +1608,7 @@ front.eps>
 (epstopdf)             \includegraphics on input line 13.
 Package epstopdf Info: Output file is already uptodate.
 
-<front-eps-converted-to.pdf, id=40, 460.72125pt x 270.00874pt>
+<front-eps-converted-to.pdf, id=41, 460.72125pt x 270.00874pt>
 File: front-eps-converted-to.pdf Graphic file (type pdf)
 
 <use front-eps-converted-to.pdf>
@@ -1631,7 +1628,7 @@ Package epstopdf Info: Source file: <Step_input_request.eps>
 erted-to.pdf Step_input_request.eps>
 (epstopdf)             \includegraphics on input line 21.
 Package epstopdf Info: Output file is already uptodate.
-<Step_input_request-eps-converted-to.pdf, id=41, 469.755pt x 269.005pt>
+<Step_input_request-eps-converted-to.pdf, id=42, 469.755pt x 269.005pt>
 File: Step_input_request-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Step_input_request-eps-converted-to.pdf>
@@ -1643,42 +1640,42 @@ line 21.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 Package epstopdf Info: Source file: <Request_with_pulse.eps>
-(epstopdf)                    date: 2015-12-28 11:56:39
-(epstopdf)                    size: 258285 bytes
+(epstopdf)                    date: 2015-12-29 13:57:13
+(epstopdf)                    size: 190201 bytes
 (epstopdf)             Output file: <Request_with_pulse-eps-converted-to.pdf>
-(epstopdf)                    date: 2015-12-28 12:04:19
-(epstopdf)                    size: 13033 bytes
+(epstopdf)                    date: 2015-12-29 13:57:58
+(epstopdf)                    size: 11217 bytes
 (epstopdf)             Command: <epstopdf --outfile=Request_with_pulse-eps-conv
 erted-to.pdf Request_with_pulse.eps>
 (epstopdf)             \includegraphics on input line 40.
 Package epstopdf Info: Output file is already uptodate.
-<Request_with_pulse-eps-converted-to.pdf, id=44, 460.72125pt x 270.00874pt>
+<Request_with_pulse-eps-converted-to.pdf, id=45, 445.665pt x 254.9525pt>
 File: Request_with_pulse-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Request_with_pulse-eps-converted-to.pdf>
 Package pdftex.def Info: Request_with_pulse-eps-converted-to.pdf used on input 
 line 40.
-(pdftex.def)             Requested size: 245.71811pt x 144.0021pt.
+(pdftex.def)             Requested size: 245.71811pt x 140.57053pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 Package epstopdf Info: Source file: <Deadband.eps>
-(epstopdf)                    date: 2015-12-28 14:06:24
-(epstopdf)                    size: 207310 bytes
+(epstopdf)                    date: 2015-12-29 13:57:13
+(epstopdf)                    size: 139699 bytes
 (epstopdf)             Output file: <Deadband-eps-converted-to.pdf>
-(epstopdf)                    date: 2015-12-28 14:12:06
-(epstopdf)                    size: 9240 bytes
+(epstopdf)                    date: 2015-12-29 13:57:58
+(epstopdf)                    size: 6806 bytes
 (epstopdf)             Command: <epstopdf --outfile=Deadband-eps-converted-to.p
 df Deadband.eps>
 (epstopdf)             \includegraphics on input line 55.
 Package epstopdf Info: Output file is already uptodate.
-<Deadband-eps-converted-to.pdf, id=46, 352.31625pt x 251.94125pt>
+<Deadband-eps-converted-to.pdf, id=47, 445.665pt x 254.9525pt>
 File: Deadband-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Deadband-eps-converted-to.pdf>
 Package pdftex.def Info: Deadband-eps-converted-to.pdf used on input line 55.
-(pdftex.def)             Requested size: 245.71811pt x 175.71182pt.
+(pdftex.def)             Requested size: 245.71811pt x 140.57053pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -1700,7 +1697,7 @@ d-to.pdf xy_HIL_and_VTM.eps>
 (epstopdf)             \includegraphics on input line 12.
 Package epstopdf Info: Output file is already uptodate.
 
-<xy_HIL_and_VTM-eps-converted-to.pdf, id=135, 354.32375pt x 283.0575pt>
+<xy_HIL_and_VTM-eps-converted-to.pdf, id=129, 354.32375pt x 283.0575pt>
 File: xy_HIL_and_VTM-eps-converted-to.pdf Graphic file (type pdf)
 
 <use xy_HIL_and_VTM-eps-converted-to.pdf>
@@ -1711,6 +1708,15 @@ Package pdftex.def Info: xy_HIL_and_VTM-eps-converted-to.pdf used on input line
 (C:\Users\1.5V\Desktop\HiL_Paper\template\Conclusion.tex)
 (C:\Users\1.5V\Desktop\HiL_Paper\template\Related_works.tex)
 (C:\Users\1.5V\Desktop\HiL_Paper\template\Acknowledgement.tex)
+Underfull \hbox (badness 1975) in paragraph at lines 113--113
+[]\OT1/ptm/m/it/10 Virtual Truck Model, Simulink li-brary de-vel-oped
+ []
+
+
+Underfull \hbox (badness 3354) in paragraph at lines 113--113
+\OT1/ptm/m/it/10 at Volvo Group Trucks Tech-nol-ogy, De-part-ment
+ []
+
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -1737,10 +1743,10 @@ Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 114.
 Package logreq Info: Writing requests to 'root.run.xml'.
  ) 
 Here is how much of TeX's memory you used:
- 35741 strings out of 493706
- 693307 string characters out of 3142168
+ 35742 strings out of 493706
+ 693331 string characters out of 3142168
  1012562 words of memory out of 3000000
- 38447 multiletter control sequences out of 15000+200000
+ 38448 multiletter control sequences out of 15000+200000
  63529 words of font info for 146 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  55i,10n,60p,10392b,1430s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1751,9 +1757,9 @@ Files (x86)/MiKTeX 2.9/fonts/type1/urw/courier/ucrr8a.pfb><C:/Program Files (x8
 .9/fonts/type1/urw/times/utmbi8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/t
 ype1/urw/times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/ti
 mes/utmri8a.pfb>
-Output written on root.pdf (4 pages, 248447 bytes).
+Output written on root.pdf (4 pages, 241812 bytes).
 PDF statistics:
- 240 PDF objects out of 1000 (max. 8388607)
+ 229 PDF objects out of 1000 (max. 8388607)
  42 named destinations out of 1000 (max. 500000)
  131 words of extra memory for PDF output out of 10000 (max. 10000000)
 
