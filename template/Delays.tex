@@ -61,9 +61,9 @@
 		
 		
 		
-		Figure \ref{fig:Deadband} shows the working principle of this measure. The mean value of the request to the \gls{ECU} equals the desired request from the steering algorithm. The pulse function oscilates between specified amplitudes outside the dead band. Through the inertia in the hydraulic system smaller angles can be accomplished, too.
+		Figure \ref{fig:Deadband} shows the working principle of this measure. The mean value of the request to the \gls{ECU} equals the desired request from the steering algorithm. The pulse function oscillates between specified amplitudes outside the dead band. Through the inertia in the hydraulic system smaller angles can be accomplished, too.
 				
-		\item Exactly determining the delay period made it possible to account for it in the calculations for initial testing, where a feedback-loop was not present and the speed was still sufficiently low. A value of 0.26\unit{s} for the front axle's reaction time and 0.30\unit{s} for the back axle's respectively are too high for higher speeds.\\
+		\item Exactly determining the delay period made it possible to account for it in the calculations for initial testing, where a feedback-loop was not present and the speed was still sufficiently low. A value of 0.26 \unit{s} for the front axle's reaction time and 0.30 \unit{s} for the back axle's respectively are too high for higher speeds.\\
 		The introduced noise shown in figure \ref{fig:Request_with_pulse} around the desired request value was also implemented in order to keep the hydraulic system active and thus eliminating some of the inertia. 
 	\end{enumerate}
 	
